@@ -1,0 +1,645 @@
+2015-05-24 14:37:19 Error: Fatal Error (1): Call to a member function find() on a non-object in [E:\wamp\www\Rila13\filRougePerso\app\Controller\ClassesController.php, line 7]
+2015-05-24 14:37:19 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /Rila13/filRougePerso/classes
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-24 15:16:00 Error: Fatal Error (1): Call to a member function find() on a non-object in [E:\wamp\www\Rila13\filRougePerso\app\Controller\ClassesController.php, line 7]
+2015-05-24 15:16:00 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /Rila13/filRougePerso/classes
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-24 15:16:05 Error: Fatal Error (1): Call to a member function find() on a non-object in [E:\wamp\www\Rila13\filRougePerso\app\Controller\ClassesController.php, line 7]
+2015-05-24 15:16:05 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /Rila13/filRougePerso/classes
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-24 15:18:28 Error: Fatal Error (1): Call to a member function find() on a non-object in [E:\wamp\www\Rila13\filRougePerso\app\Controller\ClassesController.php, line 7]
+2015-05-24 15:18:28 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /Rila13/filRougePerso/Classes
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-24 15:21:10 Error: Fatal Error (1): Call to a member function find() on a non-object in [E:\wamp\www\Rila13\filRougePerso\app\Controller\ClassesController.php, line 7]
+2015-05-24 15:21:10 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /Rila13/filRougePerso/Classes
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-24 15:22:01 Error: Fatal Error (1): Call to a member function find() on a non-object in [E:\wamp\www\Rila13\filRougePerso\app\Controller\ClassesController.php, line 7]
+2015-05-24 15:22:01 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /Rila13/filRougePerso/Classes/index
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-24 15:22:06 Error: Fatal Error (1): Call to a member function find() on a non-object in [E:\wamp\www\Rila13\filRougePerso\app\Controller\ClassesController.php, line 7]
+2015-05-24 15:22:06 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /Rila13/filRougePerso/Classes/index
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-24 15:22:15 Error: Fatal Error (1): Call to a member function find() on a non-object in [E:\wamp\www\Rila13\filRougePerso\app\Controller\ClassesController.php, line 7]
+2015-05-24 15:22:15 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /Rila13/filRougePerso/classes/index
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-24 15:22:17 Error: Fatal Error (1): Call to a member function find() on a non-object in [E:\wamp\www\Rila13\filRougePerso\app\Controller\ClassesController.php, line 7]
+2015-05-24 15:22:17 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /Rila13/filRougePerso/classes/index
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-24 15:22:18 Error: Fatal Error (1): Call to a member function find() on a non-object in [E:\wamp\www\Rila13\filRougePerso\app\Controller\ClassesController.php, line 7]
+2015-05-24 15:22:18 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /Rila13/filRougePerso/classes/index
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-24 15:23:53 Error: Fatal Error (1): Call to a member function find() on a non-object in [E:\wamp\www\Rila13\filRougePerso\app\Controller\ClassesController.php, line 7]
+2015-05-24 15:23:53 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /Rila13/filRougePerso/classes/index
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-24 15:28:52 Error: Fatal Error (1): Call to a member function find() on a non-object in [E:\wamp\www\Rila13\filRougePerso\app\Controller\ClassesController.php, line 7]
+2015-05-24 15:28:52 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /Rila13/filRougePerso/classes/index
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-24 15:30:32 Error: Fatal Error (1): Call to a member function find() on a non-object in [E:\wamp\www\Rila13\filRougePerso\app\Controller\ClassesController.php, line 7]
+2015-05-24 15:30:32 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /Rila13/filRougePerso/classes/index
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-24 15:30:33 Error: Fatal Error (1): Call to a member function find() on a non-object in [E:\wamp\www\Rila13\filRougePerso\app\Controller\ClassesController.php, line 7]
+2015-05-24 15:30:33 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /Rila13/filRougePerso/classes/index
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-24 15:40:39 Error: Fatal Error (1): Call to a member function find() on a non-object in [E:\wamp\www\Rila13\filRougePerso\app\Controller\ClassesController.php, line 7]
+2015-05-24 15:40:39 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /Rila13/filRougePerso/classes/index
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-24 15:40:44 Error: Fatal Error (1): Call to a member function find() on a non-object in [E:\wamp\www\Rila13\filRougePerso\app\Controller\ClassesController.php, line 7]
+2015-05-24 15:40:44 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /Rila13/filRougePerso/classes/index
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-24 15:40:45 Error: Fatal Error (1): Call to a member function find() on a non-object in [E:\wamp\www\Rila13\filRougePerso\app\Controller\ClassesController.php, line 7]
+2015-05-24 15:40:45 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /Rila13/filRougePerso/classes/index
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-24 15:41:55 Error: Fatal Error (1): Call to a member function find() on a non-object in [E:\wamp\www\Rila13\filRougePerso\app\Controller\ClassesController.php, line 7]
+2015-05-24 15:41:55 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /Rila13/filRougePerso/classes/index
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-24 15:41:57 Error: Fatal Error (1): Call to a member function find() on a non-object in [E:\wamp\www\Rila13\filRougePerso\app\Controller\ClassesController.php, line 7]
+2015-05-24 15:41:57 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /Rila13/filRougePerso/classes/index
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-24 15:42:51 Error: Fatal Error (1): Call to a member function find() on a non-object in [E:\wamp\www\Rila13\filRougePerso\app\Controller\ClassesController.php, line 7]
+2015-05-24 15:42:51 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /Rila13/filRougePerso/classes/index
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-24 15:42:54 Error: Fatal Error (1): Call to a member function find() on a non-object in [E:\wamp\www\Rila13\filRougePerso\app\Controller\ClassesController.php, line 7]
+2015-05-24 15:42:54 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /Rila13/filRougePerso/classes/index
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-24 15:49:45 Error: Fatal Error (1): Call to a member function find() on a non-object in [E:\wamp\www\Rila13\filRougePerso\app\Controller\ClassesController.php, line 7]
+2015-05-24 15:49:45 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /Rila13/filRougePerso/classes/index
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-24 15:49:49 Error: Fatal Error (1): Call to a member function find() on a non-object in [E:\wamp\www\Rila13\filRougePerso\app\Controller\ClassesController.php, line 7]
+2015-05-24 15:49:49 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /Rila13/filRougePerso/classes/index
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-24 15:52:44 Error: Fatal Error (1): Call to a member function find() on a non-object in [E:\wamp\www\Rila13\filRougePerso\app\Controller\ClassesController.php, line 7]
+2015-05-24 15:52:44 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /Rila13/filRougePerso/classes/index
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-24 15:52:46 Error: Fatal Error (1): Call to a member function find() on a non-object in [E:\wamp\www\Rila13\filRougePerso\app\Controller\ClassesController.php, line 7]
+2015-05-24 15:52:47 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /Rila13/filRougePerso/classes/index
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 7, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-24 15:56:01 Error: Fatal Error (4): syntax error, unexpected 'Class' (T_CLASS), expecting identifier (T_STRING) in [E:\wamp\www\Rila13\filRougePerso\app\Model\Class.php, line 3]
+2015-05-24 15:56:01 Error: [FatalErrorException] syntax error, unexpected 'Class' (T_CLASS), expecting identifier (T_STRING)
+Request URL: /Rila13/filRougePerso/classes/index
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\\wamp\\www\\Ril...', 3)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\\wamp\\www\\Ril...', 3, Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\\wamp\\www\\Ril...', 3, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-24 15:56:01 Error: Fatal Error (4): syntax error, unexpected 'Class' (T_CLASS), expecting identifier (T_STRING) in [E:\wamp\www\Rila13\filRougePerso\app\Model\Class.php, line 3]
+2015-05-24 15:56:01 Error: [FatalErrorException] syntax error, unexpected 'Class' (T_CLASS), expecting identifier (T_STRING)
+Request URL: /Rila13/filRougePerso/classes/index
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\\wamp\\www\\Ril...', 3)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\\wamp\\www\\Ril...', 3, Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\\wamp\\www\\Ril...', 3, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-24 16:33:02 Error: [MissingControllerException] Controller class ClassesController could not be found.
+Exception Attributes: array (
+  'class' => 'ClassesController',
+  'plugin' => NULL,
+)
+Request URL: /Rila13/filRougePerso/classes/index
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-24 16:34:39 Error: [MissingControllerException] Controller class ClassesController could not be found.
+Exception Attributes: array (
+  'class' => 'ClassesController',
+  'plugin' => NULL,
+)
+Request URL: /Rila13/filRougePerso/classes/index
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-24 17:03:28 Error: [MissingActionException] Action ClassesArticlesController::add() could not be found.
+Exception Attributes: array (
+  'controller' => 'ClassesArticlesController',
+  'action' => 'add',
+)
+Request URL: /Rila13/filRougePerso/classesarticles/add
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ClassesArticlesController), Object(CakeRequest))
+#2 E:\wamp\www\Rila13\filRougePerso\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-05-24 17:03:47 Error: [MissingViewException] View file "ClassesArticles\add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'ClassesArticles\\add.ctp',
+)
+Request URL: /Rila13/filRougePerso/classesarticles/add
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ClassesArticlesController), Object(CakeRequest))
+#4 E:\wamp\www\Rila13\filRougePerso\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-05-24 17:13:37 Error: [NotFoundException] Invalid post
+Request URL: /Rila13/filRougePerso/classesarticles/view
+Stack Trace:
+#0 [internal function]: ClassesArticlesController->view()
+#1 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ClassesArticlesController), Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ClassesArticlesController), Object(CakeRequest))
+#4 E:\wamp\www\Rila13\filRougePerso\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-05-24 17:14:41 Error: [NotFoundException] Invalid post
+Request URL: /Rila13/filRougePerso/classesarticles/view
+Stack Trace:
+#0 [internal function]: ClassesArticlesController->view()
+#1 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ClassesArticlesController), Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ClassesArticlesController), Object(CakeRequest))
+#4 E:\wamp\www\Rila13\filRougePerso\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-05-24 17:14:44 Error: [NotFoundException] Invalid post
+Request URL: /Rila13/filRougePerso/classesarticles/view
+Stack Trace:
+#0 [internal function]: ClassesArticlesController->view()
+#1 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ClassesArticlesController), Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ClassesArticlesController), Object(CakeRequest))
+#4 E:\wamp\www\Rila13\filRougePerso\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-05-24 17:36:51 Error: [MissingActionException] Action ClassesArticlesController::edit() could not be found.
+Exception Attributes: array (
+  'controller' => 'ClassesArticlesController',
+  'action' => 'edit',
+)
+Request URL: /Rila13/filRougePerso/classesarticles/edit/1
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ClassesArticlesController), Object(CakeRequest))
+#2 E:\wamp\www\Rila13\filRougePerso\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-05-24 17:57:18 Error: Fatal Error (1): Call to a member function findById() on a non-object in [E:\wamp\www\Rila13\filRougePerso\app\Controller\ClassesArticlesController.php, line 15]
+2015-05-24 17:57:18 Error: [FatalErrorException] Call to a member function findById() on a non-object
+Request URL: /Rila13/filRougePerso/classesarticles/view/2
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 15)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 15, Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 15, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-24 18:16:26 Error: Fatal Error (4): syntax error, unexpected ';' in [E:\wamp\www\Rila13\filRougePerso\app\View\ClassesArticles\index.ctp, line 4]
+2015-05-24 18:16:26 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /Rila13/filRougePerso/classesarticles
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\\wamp\\www\\Ril...', 4)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\\wamp\\www\\Ril...', 4, Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\\wamp\\www\\Ril...', 4, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-25 13:48:49 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Choisissez' in 'field list'
+Request URL: /Rila13/filRougePerso/classesarticles/add
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Classes...', Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Classes...', Array, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Classes...', false)
+#4 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Model.php(3022): DboSource->read(Object(ClassesArticle), Array)
+#5 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Model.php(2994): Model->_readDataSource('list', Array)
+#6 E:\wamp\www\Rila13\filRougePerso\app\Controller\ClassesArticlesController.php(27): Model->find('list', Array)
+#7 [internal function]: ClassesArticlesController->add()
+#8 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ClassesArticlesController), Array)
+#9 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ClassesArticlesController), Object(CakeRequest))
+#11 E:\wamp\www\Rila13\filRougePerso\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-05-25 13:48:49 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Choisissez' in 'field list'
+Request URL: /Rila13/filRougePerso/classesarticles/add
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Classes...', Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Classes...', Array, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Classes...', false)
+#4 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Model.php(3022): DboSource->read(Object(ClassesArticle), Array)
+#5 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Model.php(2994): Model->_readDataSource('list', Array)
+#6 E:\wamp\www\Rila13\filRougePerso\app\Controller\ClassesArticlesController.php(27): Model->find('list', Array)
+#7 [internal function]: ClassesArticlesController->add()
+#8 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ClassesArticlesController), Array)
+#9 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ClassesArticlesController), Object(CakeRequest))
+#11 E:\wamp\www\Rila13\filRougePerso\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-05-25 18:16:50 Error: Fatal Error (4): syntax error, unexpected ')', expecting ',' or ';' in [E:\wamp\www\Rila13\filRougePerso\app\View\ClassesArticles\index.ctp, line 26]
+2015-05-25 18:16:50 Error: [FatalErrorException] syntax error, unexpected ')', expecting ',' or ';'
+Request URL: /Rila13/filRougePerso/classesarticles
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\\wamp\\www\\Ril...', 26)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\\wamp\\www\\Ril...', 26, Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\\wamp\\www\\Ril...', 26, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-25 23:19:46 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'CatalogsArticle.ref_article_id' in 'on clause'
+Request URL: /Rila13/filRougePerso/refarticles
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `RefArti...', Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `RefArti...', Array, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `RefArti...', false)
+#4 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Model.php(3022): DboSource->read(Object(RefArticle), Array)
+#5 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 E:\wamp\www\Rila13\filRougePerso\app\Controller\RefArticlesController.php(7): Model->find('all')
+#7 [internal function]: RefArticlesController->index()
+#8 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(RefArticlesController), Array)
+#9 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(RefArticlesController), Object(CakeRequest))
+#11 E:\wamp\www\Rila13\filRougePerso\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-05-25 23:19:48 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'CatalogsArticle.ref_article_id' in 'on clause'
+Request URL: /Rila13/filRougePerso/refarticles
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `RefArti...', Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `RefArti...', Array, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `RefArti...', false)
+#4 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Model.php(3022): DboSource->read(Object(RefArticle), Array)
+#5 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 E:\wamp\www\Rila13\filRougePerso\app\Controller\RefArticlesController.php(7): Model->find('all')
+#7 [internal function]: RefArticlesController->index()
+#8 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(RefArticlesController), Array)
+#9 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(RefArticlesController), Object(CakeRequest))
+#11 E:\wamp\www\Rila13\filRougePerso\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-05-25 23:19:50 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'CatalogsArticle.ref_article_id' in 'on clause'
+Request URL: /Rila13/filRougePerso/refarticles
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `RefArti...', Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `RefArti...', Array, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `RefArti...', false)
+#4 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Model.php(3022): DboSource->read(Object(RefArticle), Array)
+#5 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 E:\wamp\www\Rila13\filRougePerso\app\Controller\RefArticlesController.php(7): Model->find('all')
+#7 [internal function]: RefArticlesController->index()
+#8 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(RefArticlesController), Array)
+#9 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(RefArticlesController), Object(CakeRequest))
+#11 E:\wamp\www\Rila13\filRougePerso\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-05-25 23:25:47 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'CatalogsArticle.ref_article_id' in 'on clause'
+Request URL: /Rila13/filRougePerso/refarticles
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `RefArti...', Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `RefArti...', Array, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `RefArti...', false)
+#4 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Model.php(3022): DboSource->read(Object(RefArticle), Array)
+#5 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 E:\wamp\www\Rila13\filRougePerso\app\Controller\RefArticlesController.php(7): Model->find('all')
+#7 [internal function]: RefArticlesController->index()
+#8 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(RefArticlesController), Array)
+#9 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(RefArticlesController), Object(CakeRequest))
+#11 E:\wamp\www\Rila13\filRougePerso\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-05-25 23:33:22 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Profile.published' in 'on clause'
+Request URL: /Rila13/filRougePerso/refarticles
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `RefArti...', Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `RefArti...', Array, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `RefArti...', false)
+#4 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Model.php(3022): DboSource->read(Object(RefArticle), Array)
+#5 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 E:\wamp\www\Rila13\filRougePerso\app\Controller\RefArticlesController.php(7): Model->find('all')
+#7 [internal function]: RefArticlesController->index()
+#8 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(RefArticlesController), Array)
+#9 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(RefArticlesController), Object(CakeRequest))
+#11 E:\wamp\www\Rila13\filRougePerso\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-05-25 23:33:44 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ClassesArticle.published' in 'on clause'
+Request URL: /Rila13/filRougePerso/refarticles
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `RefArti...', Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `RefArti...', Array, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `RefArti...', false)
+#4 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Model.php(3022): DboSource->read(Object(RefArticle), Array)
+#5 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 E:\wamp\www\Rila13\filRougePerso\app\Controller\RefArticlesController.php(7): Model->find('all')
+#7 [internal function]: RefArticlesController->index()
+#8 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(RefArticlesController), Array)
+#9 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(RefArticlesController), Object(CakeRequest))
+#11 E:\wamp\www\Rila13\filRougePerso\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-05-25 23:46:13 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'RefArticle.status' in 'where clause'
+Request URL: /Rila13/filRougePerso/catalogsarticles
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `RefArti...', Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `RefArti...', Array, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(1352): DboSource->fetchAll('SELECT `RefArti...', false)
+#4 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(CatalogsArticle), Object(RefArticle), 'hasMany', 'RefArticle', Array, Array, true, Array, 0, Array)
+#5 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Model.php(3022): DboSource->read(Object(CatalogsArticle), Array)
+#6 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#7 E:\wamp\www\Rila13\filRougePerso\app\Controller\CatalogsArticlesController.php(7): Model->find('all')
+#8 [internal function]: CatalogsArticlesController->index()
+#9 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(CatalogsArticlesController), Array)
+#10 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CatalogsArticlesController), Object(CakeRequest))
+#12 E:\wamp\www\Rila13\filRougePerso\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-05-25 23:58:48 Error: Fatal Error (64): Cannot redeclare RefArticle::$belongsTo in [E:\wamp\www\Rila13\filRougePerso\app\Model\RefArticle.php, line 22]
+2015-05-25 23:58:48 Error: [FatalErrorException] Cannot redeclare RefArticle::$belongsTo
+Request URL: /Rila13/filRougePerso/refarticles
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'E:\\wamp\\www\\Ril...', 22)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'E:\\wamp\\www\\Ril...', 22, Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'E:\\wamp\\www\\Ril...', 22, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-25 23:58:49 Error: Fatal Error (64): Cannot redeclare RefArticle::$belongsTo in [E:\wamp\www\Rila13\filRougePerso\app\Model\RefArticle.php, line 22]
+2015-05-25 23:58:49 Error: [FatalErrorException] Cannot redeclare RefArticle::$belongsTo
+Request URL: /Rila13/filRougePerso/refarticles
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'E:\\wamp\\www\\Ril...', 22)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'E:\\wamp\\www\\Ril...', 22, Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'E:\\wamp\\www\\Ril...', 22, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-25 23:59:26 Error: Fatal Error (64): Cannot redeclare RefArticle::$belongsTo in [E:\wamp\www\Rila13\filRougePerso\app\Model\RefArticle.php, line 22]
+2015-05-25 23:59:26 Error: [FatalErrorException] Cannot redeclare RefArticle::$belongsTo
+Request URL: /Rila13/filRougePerso/refarticles
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'E:\\wamp\\www\\Ril...', 22)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'E:\\wamp\\www\\Ril...', 22, Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'E:\\wamp\\www\\Ril...', 22, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-25 23:59:27 Error: Fatal Error (64): Cannot redeclare RefArticle::$belongsTo in [E:\wamp\www\Rila13\filRougePerso\app\Model\RefArticle.php, line 22]
+2015-05-25 23:59:27 Error: [FatalErrorException] Cannot redeclare RefArticle::$belongsTo
+Request URL: /Rila13/filRougePerso/refarticles
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'E:\\wamp\\www\\Ril...', 22)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'E:\\wamp\\www\\Ril...', 22, Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'E:\\wamp\\www\\Ril...', 22, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-26 00:00:37 Error: Fatal Error (64): Cannot redeclare ClassesArticle::$hasMany in [E:\wamp\www\Rila13\filRougePerso\app\Model\ClassesArticle.php, line 40]
+2015-05-26 00:00:37 Error: [FatalErrorException] Cannot redeclare ClassesArticle::$hasMany
+Request URL: /Rila13/filRougePerso/refarticles
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'E:\\wamp\\www\\Ril...', 40)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'E:\\wamp\\www\\Ril...', 40, Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'E:\\wamp\\www\\Ril...', 40, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-26 00:00:38 Error: Fatal Error (64): Cannot redeclare ClassesArticle::$hasMany in [E:\wamp\www\Rila13\filRougePerso\app\Model\ClassesArticle.php, line 40]
+2015-05-26 00:00:38 Error: [FatalErrorException] Cannot redeclare ClassesArticle::$hasMany
+Request URL: /Rila13/filRougePerso/refarticles
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'E:\\wamp\\www\\Ril...', 40)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'E:\\wamp\\www\\Ril...', 40, Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'E:\\wamp\\www\\Ril...', 40, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-26 00:10:48 Error: Fatal Error (1): Call to a member function find() on a non-object in [E:\wamp\www\Rila13\filRougePerso\app\Controller\RefArticlesController.php, line 25]
+2015-05-26 00:10:48 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /Rila13/filRougePerso/refarticles/add
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 25)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 25, Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'E:\\wamp\\www\\Ril...', 25, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-26 00:12:36 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ClassesArticle.id' in 'field list'
+Request URL: /Rila13/filRougePerso/refarticles/add
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Classes...', Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Classes...', Array, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Classes...', false)
+#4 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Model.php(3022): DboSource->read(Object(RefArticle), Array)
+#5 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Model.php(2994): Model->_readDataSource('list', Array)
+#6 E:\wamp\www\Rila13\filRougePerso\app\Controller\RefArticlesController.php(25): Model->find('list', Array)
+#7 [internal function]: RefArticlesController->add()
+#8 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(RefArticlesController), Array)
+#9 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(RefArticlesController), Object(CakeRequest))
+#11 E:\wamp\www\Rila13\filRougePerso\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-05-26 00:37:10 Error: Fatal Error (4): syntax error, unexpected ';' in [E:\wamp\www\Rila13\filRougePerso\app\View\RefArticles\add.ctp, line 13]
+2015-05-26 00:37:10 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /Rila13/filRougePerso/refarticles/add
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\\wamp\\www\\Ril...', 13)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\\wamp\\www\\Ril...', 13, Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\\wamp\\www\\Ril...', 13, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-26 00:40:27 Error: [NotFoundException] Invalid ref
+Request URL: /Rila13/filRougePerso/refarticles/edit
+Stack Trace:
+#0 [internal function]: RefArticlesController->edit()
+#1 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(RefArticlesController), Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(RefArticlesController), Object(CakeRequest))
+#4 E:\wamp\www\Rila13\filRougePerso\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-05-26 00:47:47 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ASC' in 'order clause'
+Request URL: /Rila13/filRougePerso/classesarticles
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Classes...', Array)
+#2 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Classes...', Array, Array)
+#3 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Classes...', false)
+#4 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Model.php(3022): DboSource->read(Object(ClassesArticle), Array)
+#5 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 E:\wamp\www\Rila13\filRougePerso\app\Controller\ClassesArticlesController.php(7): Model->find('all')
+#7 [internal function]: ClassesArticlesController->index()
+#8 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ClassesArticlesController), Array)
+#9 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ClassesArticlesController), Object(CakeRequest))
+#11 E:\wamp\www\Rila13\filRougePerso\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
