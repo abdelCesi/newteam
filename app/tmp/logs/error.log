@@ -643,3 +643,78 @@ Stack Trace:
 #10 E:\wamp\www\Rila13\filRougePerso\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ClassesArticlesController), Object(CakeRequest))
 #11 E:\wamp\www\Rila13\filRougePerso\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #12 {main}
+2015-06-21 16:56:46 Error: [MissingControllerException] Controller class DatescontrollerController could not be found.
+Exception Attributes: array (
+  'class' => 'DatescontrollerController',
+  'plugin' => NULL,
+)
+Request URL: /Rila13/filRougeNewteam/trunk/datescontroller
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougeNewteam\trunk\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-21 16:57:06 Error: [MissingTableException] Table users for model User was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'users',
+  'class' => 'User',
+  'ds' => 'default',
+)
+Request URL: /Rila13/filRougeNewteam/trunk/rdvs
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougeNewteam\trunk\lib\Cake\Model\Model.php(3644): Model->setSource('users')
+#1 E:\wamp\www\Rila13\filRougeNewteam\trunk\lib\Cake\Model\Model.php(1387): Model->getDataSource()
+#2 E:\wamp\www\Rila13\filRougeNewteam\trunk\lib\Cake\Model\Datasource\DboSource.php(2516): Model->schema()
+#3 E:\wamp\www\Rila13\filRougeNewteam\trunk\lib\Cake\Model\Datasource\DboSource.php(1741): DboSource->fields(Object(AppModel), 'User', '')
+#4 E:\wamp\www\Rila13\filRougeNewteam\trunk\lib\Cake\Model\Datasource\DboSource.php(1093): DboSource->generateAssociationQuery(Object(Rdv), Object(AppModel), 'belongsTo', 'User', Array, Array, false)
+#5 E:\wamp\www\Rila13\filRougeNewteam\trunk\lib\Cake\Model\Model.php(3022): DboSource->read(Object(Rdv), Array)
+#6 E:\wamp\www\Rila13\filRougeNewteam\trunk\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#7 E:\wamp\www\Rila13\filRougeNewteam\trunk\lib\Cake\Controller\Component\PaginatorComponent.php(196): Model->find('all', Array)
+#8 E:\wamp\www\Rila13\filRougeNewteam\trunk\app\Controller\RdvsController.php(26): PaginatorComponent->paginate()
+#9 [internal function]: RdvsController->index()
+#10 E:\wamp\www\Rila13\filRougeNewteam\trunk\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(RdvsController), Array)
+#11 E:\wamp\www\Rila13\filRougeNewteam\trunk\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 E:\wamp\www\Rila13\filRougeNewteam\trunk\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(RdvsController), Object(CakeRequest))
+#13 E:\wamp\www\Rila13\filRougeNewteam\trunk\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2015-06-21 16:58:00 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Rdv.user_id' in 'on clause'
+Request URL: /Rila13/filRougeNewteam/trunk/rdvs
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougeNewteam\trunk\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\wamp\www\Rila13\filRougeNewteam\trunk\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Rdv`.`i...', Array)
+#2 E:\wamp\www\Rila13\filRougeNewteam\trunk\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Rdv`.`i...', Array, Array)
+#3 E:\wamp\www\Rila13\filRougeNewteam\trunk\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Rdv`.`i...', false)
+#4 E:\wamp\www\Rila13\filRougeNewteam\trunk\lib\Cake\Model\Model.php(3022): DboSource->read(Object(Rdv), Array)
+#5 E:\wamp\www\Rila13\filRougeNewteam\trunk\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 E:\wamp\www\Rila13\filRougeNewteam\trunk\lib\Cake\Controller\Component\PaginatorComponent.php(196): Model->find('all', Array)
+#7 E:\wamp\www\Rila13\filRougeNewteam\trunk\app\Controller\RdvsController.php(26): PaginatorComponent->paginate()
+#8 [internal function]: RdvsController->index()
+#9 E:\wamp\www\Rila13\filRougeNewteam\trunk\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(RdvsController), Array)
+#10 E:\wamp\www\Rila13\filRougeNewteam\trunk\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 E:\wamp\www\Rila13\filRougeNewteam\trunk\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(RdvsController), Object(CakeRequest))
+#12 E:\wamp\www\Rila13\filRougeNewteam\trunk\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-06-21 16:59:56 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /Rila13/filRougeNewteam/trunk/users/add
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougeNewteam\trunk\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-21 17:02:40 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Rdv.user_id' in 'on clause'
+Request URL: /Rila13/filRougeNewteam/trunk/rdvs
+Stack Trace:
+#0 E:\wamp\www\Rila13\filRougeNewteam\trunk\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\wamp\www\Rila13\filRougeNewteam\trunk\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Rdv`.`i...', Array)
+#2 E:\wamp\www\Rila13\filRougeNewteam\trunk\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Rdv`.`i...', Array, Array)
+#3 E:\wamp\www\Rila13\filRougeNewteam\trunk\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Rdv`.`i...', false)
+#4 E:\wamp\www\Rila13\filRougeNewteam\trunk\lib\Cake\Model\Model.php(3022): DboSource->read(Object(Rdv), Array)
+#5 E:\wamp\www\Rila13\filRougeNewteam\trunk\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 E:\wamp\www\Rila13\filRougeNewteam\trunk\lib\Cake\Controller\Component\PaginatorComponent.php(196): Model->find('all', Array)
+#7 E:\wamp\www\Rila13\filRougeNewteam\trunk\app\Controller\RdvsController.php(26): PaginatorComponent->paginate()
+#8 [internal function]: RdvsController->index()
+#9 E:\wamp\www\Rila13\filRougeNewteam\trunk\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(RdvsController), Array)
+#10 E:\wamp\www\Rila13\filRougeNewteam\trunk\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 E:\wamp\www\Rila13\filRougeNewteam\trunk\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(RdvsController), Object(CakeRequest))
+#12 E:\wamp\www\Rila13\filRougeNewteam\trunk\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
