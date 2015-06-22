@@ -40,8 +40,8 @@ class Rdv extends AppModel {
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
-			'datetime' => array(
-				'rule' => array('datetime'),
+			'time' => array(
+				 'rule' => array('time'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
@@ -58,8 +58,8 @@ class Rdv extends AppModel {
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
-			'datetime' => array(
-				'rule' => array('datetime'),
+			'time' => array(
+				'rule' => array('time'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
