@@ -5,6 +5,7 @@ App::uses('AppModel', 'Model');
  *
  * @property Packing $length_tbl_id
  */
+ 
 class Length extends AppModel {
 
 /**
