@@ -115,8 +115,8 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                         <li><?= $this->Html->link("Articles", array('controller' => 'ArticlesUnits','action'=> 'index')); ?></li>
                         <li><?= $this->Html->link("Catalogue", array('controller' => 'CatalogsArticles','action'=> 'index')); ?></li>
                         <li><?= $this->Html->link("Classes", array('controller' => 'ClassesArticles','action'=> 'index')); ?></li>
-                        <li><?= $this->Html->link("Articles", array('controller' => 'ArticleUnits','action'=> 'index')); ?></li>
-                       <<li><?= $this->Html->link("Conteneur", array('controller' => 'Containers','action'=> 'index')); ?></li>
+                        <li><?= $this->Html->link("Réference", array('controller' => 'RefArticles','action'=> 'index')); ?></li>
+                       <li><?= $this->Html->link("Conteneur", array('controller' => 'Containers','action'=> 'index')); ?></li>
                     </ul>
                 </li>
         </div><!-- /.navbar-collapse -->
