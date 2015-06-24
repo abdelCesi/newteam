@@ -13,7 +13,11 @@ class ClassesArticle extends AppModel{
         'RefArticle' => array(
             'className' => 'RefArticle',
             'foreignKey' => 'classe_id'
-        )
+        ),
+        'Place' => array(
+        	'classeName' => 'Place',
+        	'foreignKey' => 'classesArticle_id'
+    	)
     );	
 
 	//public $recursive = -1;
