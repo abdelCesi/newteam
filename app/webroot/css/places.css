@@ -1,0 +1,17 @@
+/**
+ * Created by PhpStorm.
+ * User: RaphaelP
+ * Date: 22/06/2015
+ * Time: 20:35
+ */
+
+#searchPanel {
+    padding: 5px;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#searchPanel {
+    padding: 50px;
+    display: none;
+}
