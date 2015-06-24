@@ -49,7 +49,6 @@ class Width extends AppModel {
  *
  * @var array
  */
- 
 	public $hasMany = array(
 		'Packing' => array(
 			'className' => 'Packing',

@@ -3,9 +3,8 @@ App::uses('AppModel', 'Model');
 /**
  * Length Model
  *
- * @property Packing $length_tbl_id
+ * @property Packing $Packing
  */
- 
 class Length extends AppModel {
 
 /**
@@ -13,7 +12,7 @@ class Length extends AppModel {
  *
  * @var string
  */
-	public $displayField = 'length_lgt';
+	public $displayField = 'length';
 
 /**
  * Validation rules
@@ -31,7 +30,7 @@ class Length extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'length_lgt' => array(
+		'length' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
 				//'message' => 'Your custom message here',
@@ -51,9 +50,9 @@ class Length extends AppModel {
  * @var array
  */
 	public $hasMany = array(
-		'length_tbl_id' => array(
+		'Packing' => array(
 			'className' => 'Packing',
-			'foreignKey' => 'length_tbl_id',
+			'foreignKey' => 'length_id',
 			'dependent' => false,
 			'conditions' => '',
 			'fields' => '',

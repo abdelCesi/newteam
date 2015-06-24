@@ -3,7 +3,7 @@ App::uses('AppModel', 'Model');
 /**
  * Packing Model
  *
- * @property LengthTbl $LengthTbl
+ * @property Length $Length
  * @property Width $Width
  * @property Height $Height
  * @property Container $Container
@@ -26,7 +26,7 @@ class Packing extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'length_tbl_id' => array(
+		'length_id' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
 				//'message' => 'Your custom message here',
@@ -66,9 +66,9 @@ class Packing extends AppModel {
  * @var array
  */
 	public $belongsTo = array(
-		'LengthTbl' => array(
-			'className' => 'LengthTbl',
-			'foreignKey' => 'length_tbl_id',
+		'Length' => array(
+			'className' => 'Length',
+			'foreignKey' => 'length_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
