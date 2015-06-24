@@ -1,77 +1,110 @@
 <?php
+App::uses('AppController', 'Controller');
+/**
+ * ArticlesUnits Controller
+ *
+ * @property ArticlesUnit $ArticlesUnit
+ * @property PaginatorComponent $Paginator
+ */
+class ArticlesUnitsController extends AppController {
 
-class ArticlesUnitsContoller extends AppController{
-    public $helpers = array('Html', 'Form');
+/**
+ * Components
+ *
+ * @var array
+ */
+	public $components = array('Paginator');
 
-    public function index() {
-        $this->set('articlesunits', $this->ArticlesUnit->find('all'));
-    }   
+/**
+ * index method
+ *
+ * @return void
+ */
+	public function index() {
+		$this->ArticlesUnit->recursive = 0;
+		$this->set('articlesUnits', $this->Paginator->paginate());
+	}
 
-    public function view($id = null) {
-        if (!$id) {
-            throw new NotFoundException(__('Invalid post'));
-        }
+/**
+ * view method
+ *
+ * @throws NotFoundException
+ * @param string $id
+ * @return void
+ */
+	public function view($id = null) {
+		if (!$this->ArticlesUnit->exists($id)) {
+			throw new NotFoundException(__('Invalid articles unit'));
+		}
+		$options = array('conditions' => array('ArticlesUnit.' . $this->ArticlesUnit->primaryKey => $id));
+		$this->set('articlesUnit', $this->ArticlesUnit->find('first', $options));
+	}
 
-        $unit = $this->ArticlesUnit->findById($id);
-        if (!$unit) {
-            throw new NotFoundException(__('Invalid post'));
-        }
-        $this->set('unit', $unit);
-    }   
+/**
+ * add method
+ *
+ * @return void
+ */
+	public function add() {
+		if ($this->request->is('post')) {
+			$this->ArticlesUnit->create();
+			if ($this->ArticlesUnit->save($this->request->data)) {
+				$this->Session->setFlash(__('The articles unit has been saved.'));
+				return $this->redirect(array('action' => 'index'));
+			} else {
+				$this->Session->setFlash(__('The articles unit could not be saved. Please, try again.'));
+			}
+		}
+		$refArticles = $this->ArticlesUnit->RefArticle->find('list');
+		$containers = $this->ArticlesUnit->Container->find('list');
+		$this->set(compact('refArticles', 'containers'));
+	}
 
-    public function add() {
-        if ($this->request->is('post')) {
-            $this->ArticlesUnit->create();
-            if ($this->ArticlesUnit->save($this->request->data)) {
-                $this->Session->setFlash(__('Your Article Unit has been saved.'));
-                return $this->redirect(array('action' => 'index'));
-            }
-            $this->Session->setFlash(__('Unable to add your Article Unit.'));
-        }
-    }
+/**
+ * edit method
+ *
+ * @throws NotFoundException
+ * @param string $id
+ * @return void
+ */
+	public function edit($id = null) {
+		if (!$this->ArticlesUnit->exists($id)) {
+			throw new NotFoundException(__('Invalid articles unit'));
+		}
+		if ($this->request->is(array('post', 'put'))) {
+			if ($this->ArticlesUnit->save($this->request->data)) {
+				$this->Session->setFlash(__('The articles unit has been saved.'));
+				return $this->redirect(array('action' => 'index'));
+			} else {
+				$this->Session->setFlash(__('The articles unit could not be saved. Please, try again.'));
+			}
+		} else {
+			$options = array('conditions' => array('ArticlesUnit.' . $this->ArticlesUnit->primaryKey => $id));
+			$this->request->data = $this->ArticlesUnit->find('first', $options);
+		}
+		$refArticles = $this->ArticlesUnit->RefArticle->find('list');
+		$containers = $this->ArticlesUnit->Container->find('list');
+		$this->set(compact('refArticles', 'containers'));
+	}
 
-    public function edit($id = null) {
-        if (!$id) {
-            throw new NotFoundException(__('Invalid Article Unit'));
-        }
-
-        $unit = $this->ArticlesUnit->findById($id);
-        if (!$unit) {
-            throw new NotFoundException(__('Invalid Article Unit'));
-        }
-
-        if ($this->request->is(array('post', 'put'))) {
-            $this->ArticlesUnit->id = $id;
-            if ($this->ArticlesUnit->save($this->request->data)) {
-                $this->Session->setFlash(__('Your Article Unit has been updated.'));
-                return $this->redirect(array('action' => 'index'));
-            }
-            $this->Session->setFlash(__('Unable to update your Article Unit.'));
-        }
-
-        if (!$this->request->data) {
-            $this->request->data = $unit;
-        }
-    }
-
-    public function delete($id) {
-        if ($this->request->is('get')) {
-            throw new MethodNotAllowedException();
-        }
-
-        if ($this->ArticlesUnit->delete($id)) {
-            $this->Session->setFlash(
-                __('L\'unité d\'article avec id : %s a été supprimé.', h($id))
-            );
-        } else {
-            $this->Session->setFlash(
-                __('L\'unité d\'article avec l\'id: %s n\'a pas pu être supprimé.', h($id))
-            );
-        }
-
-        return $this->redirect(array('action' => 'index'));
-    }
-
+/**
+ * delete method
+ *
+ * @throws NotFoundException
+ * @param string $id
+ * @return void
+ */
+	public function delete($id = null) {
+		$this->ArticlesUnit->id = $id;
+		if (!$this->ArticlesUnit->exists()) {
+			throw new NotFoundException(__('Invalid articles unit'));
+		}
+		$this->request->allowMethod('post', 'delete');
+		if ($this->ArticlesUnit->delete()) {
+			$this->Session->setFlash(__('The articles unit has been deleted.'));
+		} else {
+			$this->Session->setFlash(__('The articles unit could not be deleted. Please, try again.'));
+		}
+		return $this->redirect(array('action' => 'index'));
+	}
 }
-
-?>
