@@ -97,6 +97,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                     <ul class="dropdown-menu">
 
                         <li><?= $this->Html->link("Utilisateurs", array('controller' => 'Users','action'=> 'index')); ?></li>
+                        <li><?= $this->Html->link("Profils", array('controller' => 'Profiles','action'=> 'index')); ?></li>
                         <li><?= $this->Html->link("Services", array('controller' => 'Services','action'=> 'index')); ?></li>
                     </ul>
                 </li>
