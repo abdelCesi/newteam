@@ -1,58 +1,82 @@
-<div class="rdvs index">
-	<h2><?php echo __('Rdvs'); ?></h2>
-	<table cellpadding="0" cellspacing="0">
-	<thead>
-	<tr>
-			<th><?php echo $this->Paginator->sort('id'); ?></th>
-			<th><?php echo $this->Paginator->sort('start_time'); ?></th>
-			<th><?php echo $this->Paginator->sort('end_time'); ?></th>
-			<th><?php echo $this->Paginator->sort('user_id'); ?></th>
-			<th><?php echo $this->Paginator->sort('date_id'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
-	</tr>
-	</thead>
-	<tbody>
-	<?php foreach ($rdvs as $rdv): ?>
-	<tr>
-		<td><?php echo h($rdv['Rdv']['id']); ?>&nbsp;</td>
-		<td><?php echo h($rdv['Rdv']['start_time']); ?>&nbsp;</td>
-		<td><?php echo h($rdv['Rdv']['end_time']); ?>&nbsp;</td>
-		<td>
-			<?php echo $this->Html->link($rdv['User']['name'], array('controller' => 'users', 'action' => 'view', $rdv['User']['id'])); ?>
-		</td>
-		<td>
-			<?php echo $this->Html->link($rdv['Date']['date_rdv'], array('controller' => 'dates', 'action' => 'view', $rdv['Date']['id'])); ?>
-		</td>
-		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $rdv['Rdv']['id'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $rdv['Rdv']['id'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $rdv['Rdv']['id']), array(), __('Are you sure you want to delete # %s?', $rdv['Rdv']['id'])); ?>
-		</td>
-	</tr>
-<?php endforeach; ?>
-	</tbody>
-	</table>
-	<p>
-	<?php
-	echo $this->Paginator->counter(array(
-	'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
-	));
-	?>	</p>
-	<div class="paging">
-	<?php
-		echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));
-		echo $this->Paginator->numbers(array('separator' => ''));
-		echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
-	?>
-	</div>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="container">
+            <h1>RDV</h1>
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered">
+                    <thead>
+                    <tr>
+                        <th><?php echo $this->Paginator->sort('id'); ?></th>
+                        <th>Heure de début</th>
+                        <th>Heure de fin</th>
+                        <th>Date du rdv</th>
+                        <th>Créé par:</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach ($rdvs as $Rdv): ?>
+                        <tr>
+                            <td>
+                                <?php echo h($Rdv['Rdv']['id']); ?>&nbsp;
+                            </td>
+							<td>
+                                <?php echo h($Rdv['Rdv']['start_time']); ?>&nbsp;
+                            </td>
+                            <td>
+                                <?php echo h($Rdv['Rdv']['end_time']); ?>&nbsp;
+                            </td> 
+							<td>
+                                <?php echo ($Rdv['Date']['date_rdv']); ?>&nbsp;
+                            </td>							
+							<td>
+                                <?php echo ($Rdv['User']['name']	); ?>&nbsp;
+                            </td>
+                            <td>
+                                
+
+                                <?php
+                                $btn_edit = "<button type='button' class='btn btn-default btn-xs' aria-label='Left Align'>
+                                                <span class='glyphicon glyphicon-pencil' aria-hidden='true'></span>
+                                            </button>";
+
+                                $btn_delete = "<button type='button' class='btn btn-default btn-xs' aria-label='Left Align'>
+                                                <span class='glyphicon glyphicon-remove' aria-hidden='true'></span>
+                                            </button>";
+                                ?>
+
+                                <?= $this->Html->link(
+                                    $btn_delete,
+                                    array(
+										'controller' => 'Rdvs',
+										'action'=> 'delete', 
+										$Rdv['Rdv']['id']),
+                                    array(
+										'escape' => false, 
+										'style' => "margin-left:10px"),
+                                    "Are you sure you wish to delete the rdv : ".$Rdv['Rdv']['id'] ." created by " . $Rdv['User']['name']
+                                );
+                                ?>
+
+                                <?= $this->Html->link(
+                                    $btn_edit,
+                                    array(
+										'controller' => 'Rdvs',
+										'action'=> 'edit',
+										$Rdv['Rdv']['id']),
+                                    array(
+										'escape' => false, 
+										'style' => "float:left;margin-left:10px"));
+                                ?>
+                            </td>
+                        </tr>
+                    <?php endforeach ?>
+                    </tbody>
+                </table>
+            </div>
+               <?= $this->Html->link("Planifier un rdv", array('controller' => 'Rdvs','action'=> 'add'), array( 'class' => 'btn btn-sm btn-primary')); ?>
+        </div>
+    </div>
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('New Rdv'), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Dates'), array('controller' => 'dates', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Date'), array('controller' => 'dates', 'action' => 'add')); ?> </li>
-	</ul>
-</div>
+
+

@@ -107,6 +107,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
                         <li><?= $this->Html->link("Rdvs", array('controller' => 'Rdvs','action'=> 'index')); ?></li>
                         <li><?= $this->Html->link("Fonctionalités", array('controller' => 'Functionnalities','action'=> 'index')); ?></li>
+						<li><?= $this->Html->link("Dates", array('controller' => 'Dates','action'=> 'index')); ?></li>
                     </ul>
                 </li>
 									<li class="dropdown">
@@ -153,6 +154,6 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
 
 <!-- cakephp code -->
-<?php /*echo $this->element('sql_dump'); */?>
+<?php /** echo $this->element('sql_dump'); */?>
 </body>
 </html>

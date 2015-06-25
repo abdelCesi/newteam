@@ -1,19 +1,21 @@
-<div class="services form">
-<?php echo $this->Form->create('Service'); ?>
-	<fieldset>
-		<legend><?php echo __('Add Service'); ?></legend>
-	<?php
-		echo $this->Form->input('service_name');
-	?>
-	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
+<h2>Création d'un service</h2>
 
-		<li><?php echo $this->Html->link(__('List Services'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
-	</ul>
-</div>
+<!-- Page d'ajout d'un utilisateur -->
+
+
+<?php
+//formulaire d'ajout , nommage des noms de colonnes pareil que ceux en base
+echo $this->Form->create('Service');
+
+    echo $this->Form->input('service_name');
+
+
+	echo $this->Form->submit('Créer', 
+        array('after' => $this->Html->link('Annuler', array('action' => 'index'), array('class' => 'btn btn-default', 'style' => 'margin-left:10px'), "Etes-vous sûr de quitter cette page ?"))
+    );
+    echo $this->Form->end();
+
+
+
+
+?>
