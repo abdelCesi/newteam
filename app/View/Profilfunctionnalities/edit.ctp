@@ -5,7 +5,7 @@
 	<?php
 		echo $this->Form->input('id');
 		echo $this->Form->input('profile_id');
-		echo $this->Form->input('functionnalitie_id');
+		echo $this->Form->input('functionnality_id');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

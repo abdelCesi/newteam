@@ -26,7 +26,7 @@ class Profilfunctionnality extends AppModel {
 		),
 		'Functionnalitie' => array(
 			'className' => 'Functionnalitie',
-			'foreignKey' => 'functionnalitie_id',
+			'foreignKey' => 'functionnality_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

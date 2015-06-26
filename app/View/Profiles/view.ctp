@@ -49,7 +49,7 @@
 		<tr>
 			<td><?php echo $profilfunctionnality['id']; ?></td>
 			<td><?php echo $profilfunctionnality['profile_id']; ?></td>
-			<td><?php echo $profilfunctionnality['functionnalitie_id']; ?></td>
+			<td><?php echo $profilfunctionnality['functionnality_id']; ?></td>
 			<td class="actions">
 				<?php echo $this->Html->link(__('View'), array('controller' => 'profilfunctionnalities', 'action' => 'view', $profilfunctionnality['id'])); ?>
 				<?php echo $this->Html->link(__('Edit'), array('controller' => 'profilfunctionnalities', 'action' => 'edit', $profilfunctionnality['id'])); ?>

@@ -5,7 +5,7 @@
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('profile_id'); ?></th>
-			<th><?php echo $this->Paginator->sort('functionnalitie_id'); ?></th>
+			<th><?php echo $this->Paginator->sort('functionnality_id'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	</thead>
