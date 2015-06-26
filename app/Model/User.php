@@ -49,6 +49,19 @@ class User extends AppModel {
             )
         )
     );
-
+	/**
+	 * belongsTo associations
+	 *
+	 * @var array
+	 */
+	public $belongsTo = array(
+		'Profile' => array(
+			'className' => 'Profile',
+			'foreignKey' => 'profile_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		)
+	);
 }
 ?>
