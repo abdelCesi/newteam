@@ -68,7 +68,10 @@ class FunctionnalitiesController extends AppController {
 		}
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->Functionnality->save($this->request->data)) {
-				return $this->flash(__('The functionnality has been saved.'), array('action' => 'index'));
+				 $this->Session->setFlash(__('The functionnality has been saved.'));
+				 return $this->redirect(array('action' => 'index'));
+			}else{
+				$this->Session->setFlash(__('The functionnality could not be saved. Please, try again.'));
 			}
 		} else {
 			$options = array('conditions' => array('Functionnality.' . $this->Functionnality->primaryKey => $id));
@@ -88,12 +91,13 @@ class FunctionnalitiesController extends AppController {
 		if (!$this->Functionnality->exists()) {
 			throw new NotFoundException(__('Invalid functionnality'));
 		}
-		$this->request->allowMethod('post', 'delete');
+
 		if ($this->Functionnality->delete()) {
-			return $this->flash(__('The functionnality has been deleted.'), array('action' => 'index'));
+			$this->Session->setFlash(__('The functionnality has been deleted.'));
 		} else {
-			return $this->flash(__('The functionnality could not be deleted. Please, try again.'), array('action' => 'index'));
+			 $this->Session->setFlash(__('The functionnality could not be deleted. Please, try again.'), array('action' => 'index'));
 		}
+			return $this->redirect(array('action'=>'index'));
 	}
 
 /**
@@ -131,6 +135,7 @@ class FunctionnalitiesController extends AppController {
 			$this->Functionnality->create();
 			if ($this->Functionnality->save($this->request->data)) {
 				return $this->flash(__('The functionnality has been saved.'), array('action' => 'index'));
+				
 			}
 		}
 	}
@@ -146,7 +151,7 @@ class FunctionnalitiesController extends AppController {
 		if (!$this->Functionnality->exists($id)) {
 			throw new NotFoundException(__('Invalid functionnality'));
 		}
-		if ($this->request->is(array('post', 'put'))) {
+		if ($this->request->is(array('post'))) {
 			if ($this->Functionnality->save($this->request->data)) {
 				return $this->flash(__('The functionnality has been saved.'), array('action' => 'index'));
 			}
@@ -168,7 +173,7 @@ class FunctionnalitiesController extends AppController {
 		if (!$this->Functionnality->exists()) {
 			throw new NotFoundException(__('Invalid functionnality'));
 		}
-		$this->request->allowMethod('post', 'delete');
+
 		if ($this->Functionnality->delete()) {
 			return $this->flash(__('The functionnality has been deleted.'), array('action' => 'index'));
 		} else {

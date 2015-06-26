@@ -7,3 +7,4 @@ echo $this->Form->input('label');
 echo $this->Form->input('id', array('type' => 'hidden'));
 echo $this->Form->end('Sauvegarder le catalogue');
 ?>
+

@@ -86,6 +86,7 @@ class RdvsController extends AppController {
 		$users = $this->Rdv->User->find('list');
 		$dates = $this->Rdv->Date->find('list');
 		$this->set(compact('users', 'dates'));
+		$this->render('edit');
 	}
 
 /**
@@ -100,7 +101,8 @@ class RdvsController extends AppController {
 		if (!$this->Rdv->exists()) {
 			throw new NotFoundException(__('Invalid rdv'));
 		}
-		$this->request->allowMethod('post', 'delete');
+		// $this->request->allowMethod('post', 'delete');
+
 		if ($this->Rdv->delete()) {
 			$this->Session->setFlash(__('The rdv has been deleted.'));
 		} else {

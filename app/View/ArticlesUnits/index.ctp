@@ -1,56 +1,68 @@
-<div class="articlesUnits index">
-	<h2><?php echo __('Articles Units'); ?></h2>
-	<table cellpadding="0" cellspacing="0">
-	<thead>
-	<tr>
-			<th><?php echo $this->Paginator->sort('id'); ?></th>
-			<th><?php echo $this->Paginator->sort('container_id'); ?></th>
-			<th><?php echo $this->Paginator->sort('validity_date'); ?></th>
-			<th><?php echo $this->Paginator->sort('ref_article_id'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
-	</tr>
-	</thead>
-	<tbody>
-	<?php foreach ($articlesUnits as $articlesUnit): ?>
-	<tr>
-		<td><?php echo h($articlesUnit['ArticlesUnit']['id']); ?>&nbsp;</td>
-		<td>
-			<?php echo $this->Html->link($articlesUnit['Container']['id'], array('controller' => 'containers', 'action' => 'view', $articlesUnit['Container']['id'])); ?>
-		</td>
-		<td><?php echo h($articlesUnit['ArticlesUnit']['validity_date']); ?>&nbsp;</td>
-		<td>
-			<?php echo $this->Html->link($articlesUnit['RefArticle']['id'], array('controller' => 'ref_articles', 'action' => 'view', $articlesUnit['RefArticle']['id'])); ?>
-		</td>
-		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $articlesUnit['ArticlesUnit']['id'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $articlesUnit['ArticlesUnit']['id'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $articlesUnit['ArticlesUnit']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $articlesUnit['ArticlesUnit']['id']))); ?>
-		</td>
-	</tr>
-<?php endforeach; ?>
-	</tbody>
-	</table>
-	<p>
-	<?php
-	echo $this->Paginator->counter(array(
-		'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
-	));
-	?>	</p>
-	<div class="paging">
-	<?php
-		echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));
-		echo $this->Paginator->numbers(array('separator' => ''));
-		echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
-	?>
-	</div>
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="container">
+            <h1>Unité article</h1>
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered">
+                    <thead>
+                    <tr>
+                    	<th>ID</th>
+						<th>ID du conteneur</th>
+						<th>Date de validité</th>
+						<th>Id de la référence article</th>
+						<th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach ($articlesUnits as $articlesUnit): ?>
+                        <tr>
+                            <td>
+                                <?= $articlesUnit['ArticlesUnit']['id']; ?>
+                            </td>
+                            <td>
+                                <?= $this->Html->link($articlesUnit['Container']['id'], array('controller' => 'containers', 'action' => 'view', $articlesUnit['Container']['id']));  ?>
+                            </td>
+							  <td>
+                                <?= $articlesUnit['ArticlesUnit']['validity_date']; ?>
+                            </td>
+                            <td>
+                                <?= $this->Html->link($articlesUnit['RefArticle']['id'], array('controller' => 'ref_articles', 'action' => 'view', $articlesUnit['RefArticle']['id']));?>
+                            </td>
+
+                            <td>
+
+                                <?php
+                                $btn_edit = "<button type='button' class='btn btn-default btn-xs' aria-label='Left Align'>
+                                                <span class='glyphicon glyphicon-pencil' aria-hidden='true'></span>
+                                            </button>";
+
+                                $btn_delete = "<button type='button' class='btn btn-default btn-xs' aria-label='Left Align'>
+                                                <span class='glyphicon glyphicon-remove' aria-hidden='true'></span>
+                                            </button>";
+                                ?>
+
+                                <?= $this->Html->link(
+                                    $btn_delete,
+                                    array('controller' => 'ArticlesUnits','action'=> 'delete', $articlesUnit['ArticlesUnit']['id']),
+                                    array('escape' => false, 'style' => "margin-left:10px"),
+                                    "Are you sure you wish to delete the User : ".$articlesUnit['ArticlesUnit']['name']
+                                );
+                                ?>
+
+                                <?= $this->Html->link(
+                                    $btn_edit,
+                                    array('controller' => 'ArticlesUnits','action'=> 'edit', $articlesUnit['ArticlesUnit']['id']),
+                                    array('escape' => false, 'style' => "float:left;margin-left:10px"));
+                                ?>
+                            </td>
+                        </tr>
+                    <?php endforeach ?>
+                    </tbody>
+                </table>
+            </div>
+            <?= $this->Html->link("Ajouter une unité article", array('controller' => 'ArticlesUnits','action'=> 'add'), array( 'class' => 'btn btn-sm btn-primary')); ?>
+        </div>
+    </div>
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('New Articles Unit'), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('List Ref Articles'), array('controller' => 'ref_articles', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Ref Article'), array('controller' => 'ref_articles', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Containers'), array('controller' => 'containers', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Container'), array('controller' => 'containers', 'action' => 'add')); ?> </li>
-	</ul>
-</div>
+

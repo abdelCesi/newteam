@@ -91,7 +91,7 @@ class UsersController extends AppController {
         $id = $this->request->params['pass'][0];
 
 
-        if( $this->request->is('get') ){
+        if( $this->request->is('post') ){
 
             $this->Session->setFlash('Méthode Delete n&rsquo;est pas autorisé ');
             $this->redirect(array('action' => 'index'));

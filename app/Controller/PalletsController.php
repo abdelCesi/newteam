@@ -97,7 +97,6 @@ class PalletsController extends AppController {
 		if (!$this->Pallet->exists()) {
 			throw new NotFoundException(__('Invalid pallet'));
 		}
-		$this->request->allowMethod('post', 'delete');
 		if ($this->Pallet->delete()) {
 			$this->Session->setFlash(__('The pallet has been deleted.'));
 		} else {

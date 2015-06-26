@@ -103,7 +103,7 @@ class ContainersController extends AppController {
 		if (!$this->Container->exists()) {
 			throw new NotFoundException(__('Invalid container'));
 		}
-		$this->request->allowMethod('post', 'delete');
+
 		if ($this->Container->delete()) {
 			$this->Session->setFlash(__('The container has been deleted.'));
 		} else {

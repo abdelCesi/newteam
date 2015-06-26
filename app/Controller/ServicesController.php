@@ -94,7 +94,7 @@ class ServicesController extends AppController {
 		if (!$this->Service->exists()) {
 			throw new NotFoundException(__('Invalid service'));
 		}
-		$this->request->allowMethod('post', 'delete');
+
 		if ($this->Service->delete()) {
 			$this->Session->setFlash(__('The service has been deleted.'));
 		} else {

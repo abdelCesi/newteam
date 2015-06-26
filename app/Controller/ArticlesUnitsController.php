@@ -99,7 +99,7 @@ class ArticlesUnitsController extends AppController {
 		if (!$this->ArticlesUnit->exists()) {
 			throw new NotFoundException(__('Invalid articles unit'));
 		}
-		$this->request->allowMethod('post', 'delete');
+		
 		if ($this->ArticlesUnit->delete()) {
 			$this->Session->setFlash(__('The articles unit has been deleted.'));
 		} else {

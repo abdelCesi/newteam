@@ -1,63 +1,91 @@
-<div class="packings index">
-	<h2><?php echo __('Packings'); ?></h2>
-	<table cellpadding="0" cellspacing="0">
-	<thead>
-	<tr>
-			<th><?php echo $this->Paginator->sort('id'); ?></th>
-			<th><?php echo $this->Paginator->sort('length_id'); ?></th>
-			<th><?php echo $this->Paginator->sort('width_id'); ?></th>
-			<th><?php echo $this->Paginator->sort('height_id'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
-	</tr>
-	</thead>
-	<tbody>
-	<?php foreach ($packings as $packing): ?>
-	<tr>
-		<td><?php echo h($packing['Packing']['id']); ?>&nbsp;</td>
-		<td>
-			<?php echo $this->Html->link($packing['Length']['length'], array('controller' => 'lengths', 'action' => 'view', $packing['Length']['id'])); ?>
-		</td>
-		<td>
-			<?php echo $this->Html->link($packing['Width']['width'], array('controller' => 'widths', 'action' => 'view', $packing['Width']['id'])); ?>
-		</td>
-		<td>
-			<?php echo $this->Html->link($packing['Height']['height'], array('controller' => 'heights', 'action' => 'view', $packing['Height']['id'])); ?>
-		</td>
-		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $packing['Packing']['id'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $packing['Packing']['id'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $packing['Packing']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $packing['Packing']['id']))); ?>
-		</td>
-	</tr>
-<?php endforeach; ?>
-	</tbody>
-	</table>
-	<p>
-	<?php
-	echo $this->Paginator->counter(array(
-		'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
-	));
-	?>	</p>
-	<div class="paging">
-	<?php
-		echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));
-		echo $this->Paginator->numbers(array('separator' => ''));
-		echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
-	?>
-	</div>
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+		
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="container">
+            <h1>Conditionnements</h1>
+			
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+				<li><?php echo $this->Html->link(__('Ajouter un conditionnement'), array('action' => 'add')); ?></li>
+
+				<li><?php echo $this->Html->link(__('Gérer longueur'), array('controller' => 'lengths', 'action' => 'index')); ?> </li>
+
+				<li><?php echo $this->Html->link(__('Gérer largeur'), array('controller' => 'widths', 'action' => 'index')); ?> </li>
+
+				<li><?php echo $this->Html->link(__('Gérer hauteur'), array('controller' => 'heights', 'action' => 'index')); ?> </li>
+
+				<li><?php echo $this->Html->link(__('Gérer les conteneurs'), array('controller' => 'containers', 'action' => 'index')); ?> </li>
+			</ul>
+ </div>
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered">
+                    <thead>
+                    <tr>
+						<th><?php echo $this->Paginator->sort('id'); ?></th>
+						<th><?php echo $this->Paginator->sort('length_id'); ?></th>
+						<th><?php echo $this->Paginator->sort('width_id'); ?></th>
+						<th><?php echo $this->Paginator->sort('height_id'); ?></th>
+						<th class="actions"><?php echo __('Actions'); ?></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach ($packings as $packing): ?>
+						<tr>
+							<td><?php echo h($packing['Packing']['id']); ?>&nbsp;</td>
+							<td>
+								<?php echo $this->Html->link($packing['Length']['length'], array('controller' => 'lengths', 'action' => 'view', $packing['Length']['id'])); ?>
+							</td>
+							<td>
+								<?php echo $this->Html->link($packing['Width']['width'], array('controller' => 'widths', 'action' => 'view', $packing['Width']['id'])); ?>
+							</td>
+							<td>
+								<?php echo $this->Html->link($packing['Height']['height'], array('controller' => 'heights', 'action' => 'view', $packing['Height']['id'])); ?>
+							</td>
+                            <td>
+
+                                <?php
+                                $btn_edit = "<button type='button' class='btn btn-default btn-xs' aria-label='Left Align'>
+                                                <span class='glyphicon glyphicon-pencil' aria-hidden='true'></span>
+                                            </button>";
+
+                                $btn_delete = "<button type='button' class='btn btn-default btn-xs' aria-label='Left Align'>
+                                                <span class='glyphicon glyphicon-remove' aria-hidden='true'></span>
+                                            </button>";
+                                ?>
+
+                                <?= $this->Html->link(
+                                    $btn_delete,
+                                    array('controller' => 'Packings','action'=> 'delete', $packing['Packing']['id']),
+                                    array('escape' => false, 'style' => "margin-left:10px"),
+                                    "Are you sure you wish to delete the container : ".$packing['Packing']['id']
+                                );
+                                ?>
+
+                                <?= $this->Html->link(
+                                    $btn_edit,
+                                    array('controller' => 'Packings','action'=> 'edit', $container['Packing']['id']),
+                                    array('escape' => false, 'style' => "float:left;margin-left:10px"));
+                                ?>
+                            </td>
+                        </tr>
+                    <?php endforeach ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="actions">
-	<h3><?php echo __('Menu'); ?></h3>
-	<ul>
-		<li>Packing</li>
-		<li><?php echo $this->Html->link(__('New Packing'), array('action' => 'add')); ?></li> </br>
-		<li>Length</li>
-		<li><?php echo $this->Html->link(__('Manage Lengths'), array('controller' => 'lengths', 'action' => 'index')); ?> </li> </br>
-		<li>Width</li>
-		<li><?php echo $this->Html->link(__('Manage Widths'), array('controller' => 'widths', 'action' => 'index')); ?> </li> </br>
-		<li>Height</li>
-		<li><?php echo $this->Html->link(__('Manage Heights'), array('controller' => 'heights', 'action' => 'index')); ?> </li> </br>
-		<li>Container</li>
-		<li><?php echo $this->Html->link(__('Manage Containers'), array('controller' => 'containers', 'action' => 'index')); ?> </li>
-	</ul>
-</div>
+
+

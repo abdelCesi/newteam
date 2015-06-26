@@ -94,7 +94,7 @@ class DatesController extends AppController {
 		if (!$this->Date->exists()) {
 			throw new NotFoundException(__('Invalid date'));
 		}
-		$this->request->allowMethod('post', 'delete');
+
 		if ($this->Date->delete()) {
 			$this->Session->setFlash(__('The date has been deleted.'));
 		} else {

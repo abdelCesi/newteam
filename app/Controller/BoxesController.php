@@ -97,7 +97,6 @@ class BoxesController extends AppController {
 		if (!$this->Box->exists()) {
 			throw new NotFoundException(__('Invalid box'));
 		}
-		$this->request->allowMethod('post', 'delete');
 		if ($this->Box->delete()) {
 			$this->Session->setFlash(__('The box has been deleted.'));
 		} else {

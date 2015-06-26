@@ -101,7 +101,7 @@ class PackingsController extends AppController {
 		if (!$this->Packing->exists()) {
 			throw new NotFoundException(__('Invalid packing'));
 		}
-		$this->request->allowMethod('post', 'delete');
+
 		if ($this->Packing->delete()) {
 			$this->Session->setFlash(__('The packing has been deleted.'));
 		} else {

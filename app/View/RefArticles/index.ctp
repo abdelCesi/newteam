@@ -27,9 +27,29 @@
         <td><?php echo $ref['ClassesArticle']['label']; ?></td>
         <td><?php echo $ref['CatalogsArticle']['label']; ?></td>
         <td>
-            <?php echo $this->Html->link('Editer', array('action' => 'edit', $ref['RefArticle']['id'])); ?>
-            <?php echo $this->Form->postLink('Supprimer', array('action' => 'delete', $ref['RefArticle']['id']),
-                                            array('confirm' => 'Veuillez confirmer la suppression ?')); ?>
+             <?php
+                                $btn_edit = "<button type='button' class='btn btn-default btn-xs' aria-label='Left Align'>
+                                                <span class='glyphicon glyphicon-pencil' aria-hidden='true'></span>
+                                            </button>";
+
+                                $btn_delete = "<button type='button' class='btn btn-default btn-xs' aria-label='Left Align'>
+                                                <span class='glyphicon glyphicon-remove' aria-hidden='true'></span>
+                                            </button>";
+                                ?>
+
+                                <?= $this->Html->link(
+                                    $btn_delete,
+                                    array('controller' => 'classesarticles','action'=> 'delete', $ref['RefArticle']['id']),
+                                    array('escape' => false, 'style' => "margin-left:10px"),
+                                    "Are you sure you wish to delete the User : ".$ref['RefArticle']['label']
+                                );
+                                ?>
+
+                                <?= $this->Html->link(
+                                    $btn_edit,
+                                    array('controller' => 'classesarticles','action'=> 'edit', $ref['RefArticle']['id']),
+                                    array('escape' => false, 'style' => "float:left;margin-left:10px"));
+                                ?>
         </td>
     </tr>
     <?php endforeach; ?>
