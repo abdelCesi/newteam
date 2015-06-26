@@ -4,17 +4,20 @@
     <div class="panel-body">
         <div class="container">
             <h1>Listes des utilisateurs</h1>
+            <?= $this->Html->link("Ajouter un utilisateur", array('controller' => 'Users','action'=> 'add'), array( 'class' => 'btn btn-sm btn-primary')); ?>
+            <br />
+            <br />
             <div class="table-responsive">
                 <table class="table table-hover table-bordered">
                     <thead>
                     <tr>
-                    	<th>ID</th>
-						<th>Username</th>
-						<th>Firstname</th>
-						<th>Address</th>
-						<th>Mail</th>
-						<th>Phone_Number</th>
-						<th>Actions</th>
+                        <th>ID</th>
+                        <th>Username</th>
+                        <th>Firstname</th>
+                        <th>Address</th>
+                        <th>Mail</th>
+                        <th>Phone_Number</th>
+                        <th>Actions</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -26,13 +29,13 @@
                             <td>
                                 <?= $User['User']['name']; ?>
                             </td>
-							  <td>
+                              <td>
                                 <?= $User['User']['firstname']; ?>
                             </td>
                             <td>
                                 <?= $User['User']['address']; ?>
                             </td>
-							  <td>
+                              <td>
                                 <?= $User['User']['mail']; ?>
                             </td>
                             <td>
@@ -41,6 +44,10 @@
                             <td>
 
                                 <?php
+                                $btn_view = "<button type='button' class='btn btn-default btn-xs' aria-label='Left Align'>
+                                                <span class='glyphicon glyphicon-info-sign' aria-hidden='true'></span>
+                                            </button>";
+
                                 $btn_edit = "<button type='button' class='btn btn-default btn-xs' aria-label='Left Align'>
                                                 <span class='glyphicon glyphicon-pencil' aria-hidden='true'></span>
                                             </button>";
@@ -48,6 +55,12 @@
                                 $btn_delete = "<button type='button' class='btn btn-default btn-xs' aria-label='Left Align'>
                                                 <span class='glyphicon glyphicon-remove' aria-hidden='true'></span>
                                             </button>";
+                                ?>
+
+                                <?= $this->Html->link(
+                                    $btn_view,
+                                    array('controller' => 'Users','action'=> 'View', $User['User']['id']),
+                                    array('escape' => false, 'style' => "float:left;margin-left:10px"));
                                 ?>
 
                                 <?= $this->Html->link(
@@ -69,7 +82,6 @@
                     </tbody>
                 </table>
             </div>
-            <?= $this->Html->link("Ajouter un utilisateur", array('controller' => 'Users','action'=> 'add'), array( 'class' => 'btn btn-sm btn-primary')); ?>
         </div>
     </div>
 </div>
