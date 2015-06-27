@@ -149,7 +149,7 @@ class UsersController extends AppController {
 
     }
 
-    public function affectSrv( ){
+    public function affectSrv(){
 
         //populate DDL services
         //$dataServices = $this->User->Service->find('list', array('fields' => array('Service.id', 'Service.service_name')));

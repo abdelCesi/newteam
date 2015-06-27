@@ -45,7 +45,7 @@
                                     $btn_delete,
                                     array('controller' => 'classesarticles','action'=> 'delete', $class['ClassesArticle']['id']),
                                     array('escape' => false, 'style' => "margin-left:10px"),
-                                    "Are you sure you wish to delete the User : ".$class['ClassesArticle']['name']
+                                    "Are you sure you wish to delete the Class : ".$class['ClassesArticle']['label']
                                 );
                                 ?>
 
