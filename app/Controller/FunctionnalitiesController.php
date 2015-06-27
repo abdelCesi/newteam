@@ -68,10 +68,8 @@ class FunctionnalitiesController extends AppController {
 		}
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->Functionnality->save($this->request->data)) {
-				 $this->Session->setFlash(__('The functionnality has been saved.'));
-				 return $this->redirect(array('action' => 'index'));
-			}else{
-				$this->Session->setFlash(__('The functionnality could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('The functionnality has been saved.'));
+				return $this -> redirect(array('action' => 'index'));
 			}
 		} else {
 			$options = array('conditions' => array('Functionnality.' . $this->Functionnality->primaryKey => $id));
@@ -91,93 +89,13 @@ class FunctionnalitiesController extends AppController {
 		if (!$this->Functionnality->exists()) {
 			throw new NotFoundException(__('Invalid functionnality'));
 		}
-
+		$this->request->allowMethod('post', 'delete');
 		if ($this->Functionnality->delete()) {
 			$this->Session->setFlash(__('The functionnality has been deleted.'));
+			return $this -> redirect(array('action' => 'index'));
 		} else {
-			 $this->Session->setFlash(__('The functionnality could not be deleted. Please, try again.'), array('action' => 'index'));
-		}
-			return $this->redirect(array('action'=>'index'));
-	}
-
-/**
- * admin_index method
- *
- * @return void
- */
-	public function admin_index() {
-		$this->Functionnality->recursive = 0;
-		$this->set('functionnalities', $this->Paginator->paginate());
-	}
-
-/**
- * admin_view method
- *
- * @throws NotFoundException
- * @param string $id
- * @return void
- */
-	public function admin_view($id = null) {
-		if (!$this->Functionnality->exists($id)) {
-			throw new NotFoundException(__('Invalid functionnality'));
-		}
-		$options = array('conditions' => array('Functionnality.' . $this->Functionnality->primaryKey => $id));
-		$this->set('functionnality', $this->Functionnality->find('first', $options));
-	}
-
-/**
- * admin_add method
- *
- * @return void
- */
-	public function admin_add() {
-		if ($this->request->is('post')) {
-			$this->Functionnality->create();
-			if ($this->Functionnality->save($this->request->data)) {
-				return $this->flash(__('The functionnality has been saved.'), array('action' => 'index'));
-				
-			}
-		}
-	}
-
-/**
- * admin_edit method
- *
- * @throws NotFoundException
- * @param string $id
- * @return void
- */
-	public function admin_edit($id = null) {
-		if (!$this->Functionnality->exists($id)) {
-			throw new NotFoundException(__('Invalid functionnality'));
-		}
-		if ($this->request->is(array('post'))) {
-			if ($this->Functionnality->save($this->request->data)) {
-				return $this->flash(__('The functionnality has been saved.'), array('action' => 'index'));
-			}
-		} else {
-			$options = array('conditions' => array('Functionnality.' . $this->Functionnality->primaryKey => $id));
-			$this->request->data = $this->Functionnality->find('first', $options);
-		}
-	}
-
-/**
- * admin_delete method
- *
- * @throws NotFoundException
- * @param string $id
- * @return void
- */
-	public function admin_delete($id = null) {
-		$this->Functionnality->id = $id;
-		if (!$this->Functionnality->exists()) {
-			throw new NotFoundException(__('Invalid functionnality'));
-		}
-
-		if ($this->Functionnality->delete()) {
-			return $this->flash(__('The functionnality has been deleted.'), array('action' => 'index'));
-		} else {
-			return $this->flash(__('The functionnality could not be deleted. Please, try again.'), array('action' => 'index'));
+			$this->Session->setFlash(__('The functionnality could not be deleted. Please, try again.'));
+			return $this -> redirect(array('action' => 'index'));
 		}
 	}
 }

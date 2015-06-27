@@ -49,7 +49,8 @@ class WorkingHoursController extends AppController {
 		if ($this->request->is('post')) {
 			$this->WorkingHour->create();
 			if ($this->WorkingHour->save($this->request->data)) {
-				return $this->flash(__('The working hour has been saved.'), array('action' => 'index'));
+				$this->Session->setFlash(__('The working hour has been saved.'));
+				return $this -> redirect(array('action' => 'index'));
 			}
 		}
 	}
@@ -67,7 +68,8 @@ class WorkingHoursController extends AppController {
 		}
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->WorkingHour->save($this->request->data)) {
-				return $this->flash(__('The working hour has been saved.'), array('action' => 'index'));
+				$this->Session->setFlash(__('The working hour has been saved.'));
+				return $this -> redirect(array('action' => 'index'));
 			}
 		} else {
 			$options = array('conditions' => array('WorkingHour.' . $this->WorkingHour->primaryKey => $id));
@@ -89,89 +91,11 @@ class WorkingHoursController extends AppController {
 		}
 		$this->request->allowMethod('post', 'delete');
 		if ($this->WorkingHour->delete()) {
-			return $this->flash(__('The working hour has been deleted.'), array('action' => 'index'));
+			$this->Session->setFlash(__('The working hour has been deleted.'));
+			return $this -> redirect(array('action' => 'index'));
 		} else {
-			return $this->flash(__('The working hour could not be deleted. Please, try again.'), array('action' => 'index'));
-		}
-	}
-
-/**
- * admin_index method
- *
- * @return void
- */
-	public function admin_index() {
-		$this->WorkingHour->recursive = 0;
-		$this->set('workingHours', $this->Paginator->paginate());
-	}
-
-/**
- * admin_view method
- *
- * @throws NotFoundException
- * @param string $id
- * @return void
- */
-	public function admin_view($id = null) {
-		if (!$this->WorkingHour->exists($id)) {
-			throw new NotFoundException(__('Invalid working hour'));
-		}
-		$options = array('conditions' => array('WorkingHour.' . $this->WorkingHour->primaryKey => $id));
-		$this->set('workingHour', $this->WorkingHour->find('first', $options));
-	}
-
-/**
- * admin_add method
- *
- * @return void
- */
-	public function admin_add() {
-		if ($this->request->is('post')) {
-			$this->WorkingHour->create();
-			if ($this->WorkingHour->save($this->request->data)) {
-				return $this->flash(__('The working hour has been saved.'), array('action' => 'index'));
-			}
-		}
-	}
-
-/**
- * admin_edit method
- *
- * @throws NotFoundException
- * @param string $id
- * @return void
- */
-	public function admin_edit($id = null) {
-		if (!$this->WorkingHour->exists($id)) {
-			throw new NotFoundException(__('Invalid working hour'));
-		}
-		if ($this->request->is(array('post', 'put'))) {
-			if ($this->WorkingHour->save($this->request->data)) {
-				return $this->flash(__('The working hour has been saved.'), array('action' => 'index'));
-			}
-		} else {
-			$options = array('conditions' => array('WorkingHour.' . $this->WorkingHour->primaryKey => $id));
-			$this->request->data = $this->WorkingHour->find('first', $options);
-		}
-	}
-
-/**
- * admin_delete method
- *
- * @throws NotFoundException
- * @param string $id
- * @return void
- */
-	public function admin_delete($id = null) {
-		$this->WorkingHour->id = $id;
-		if (!$this->WorkingHour->exists()) {
-			throw new NotFoundException(__('Invalid working hour'));
-		}
-		$this->request->allowMethod('post', 'delete');
-		if ($this->WorkingHour->delete()) {
-			return $this->flash(__('The working hour has been deleted.'), array('action' => 'index'));
-		} else {
-			return $this->flash(__('The working hour could not be deleted. Please, try again.'), array('action' => 'index'));
+			$this->Session->setFlash(__('The working hour could not be deleted. Please, try again.'));
+			return $this -> redirect(array('action' => 'index'));
 		}
 	}
 }
