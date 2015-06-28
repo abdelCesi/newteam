@@ -6,7 +6,7 @@
 <?php
 //formulaire d'ajout , nommage des noms de colonnes pareil que ceux en base
 echo $this->Form->create('Box');
-
+echo $this->Form->input('id');
 echo $this->Form->input('container_id');
 
 	echo $this->Form->submit('Modifier', 

@@ -8,6 +8,7 @@
 	echo $this->Form->create('Profile', array(
     'inputDefaults'=>array('div'=>'false', 'label'=>false)));
 	
+	echo $this->Form->input('id');
 	echo $this->Form->input('profile_name', array (
 		'label' => 'Nom du profil '));
 	echo $this->Form->input('working_hour_id', array (

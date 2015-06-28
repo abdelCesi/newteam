@@ -2,6 +2,7 @@
 
 <h1>Editer une référence article</h1>
 <?php
+echo $this->Form->input('id');
 echo $this->Form->create('RefArticle');
 echo $this->Form->input('reference');
 echo $this->Form->input('label');

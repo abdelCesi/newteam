@@ -1,11 +1,11 @@
 <h4>
-	<label for="reference">
+	<label for="Identifiant">
 		<b>Identifiant :</b>
 		<?php echo h($user['User']['id']); ?>
 	</label>
 </h4>
 <h4>
-	<label for="label">
+	<label for="Nom">
 		<b>Nom :</b>
 		<?php echo h($user['User']['name']); ?>
 	</label>
@@ -53,6 +53,7 @@
     array('controller' => 'Users','action'=> 'initMDP', $user['User']['id']),
     array('escape' => false, 'style' => "float:left;margin-left:10px"));
 ?>
+
 <!-- Modal initialise password -->
 <div id="initPwd" class="modal fade">
     <div class="modal-dialog">
@@ -114,3 +115,13 @@
         </div>
     </div>
 </div>
+<?php
+	$init_pwd = "<a href='#checkRDVdate' class='pull-left btn btn-sm btn-success' data-toggle='modal'>
+					Consulter mes rdvs
+				</a>";
+?>
+<?= $this->Html->link(
+    $init_pwd,
+    array('controller' => 'Users','action'=> 'checkRDVdate', $user['User']['id']),
+    array('escape' => false, 'style' => "float:left;margin-left:10px"));
+?>

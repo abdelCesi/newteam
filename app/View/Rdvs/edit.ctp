@@ -8,6 +8,7 @@
 	echo $this->Form->create('Rdv', array(
     'inputDefaults'=>array('div'=>'false', 'label'=>false)));
 	
+	echo $this->Form->input('id');
 	echo $this->Form->input('user_id', array (
 		'label' => 'Organisateur',
 		'type' => 'select',
