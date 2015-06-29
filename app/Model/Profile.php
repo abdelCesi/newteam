@@ -47,7 +47,7 @@ class Profile extends AppModel {
 		),
 		'User' => array(
 			'className' => 'User',
-			'foreignKey' => 'user_id',
+			'foreignKey' => 'profile_id',
 			'dependent' => false,
 			'conditions' => '',
 			'fields' => '',

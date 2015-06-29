@@ -16,7 +16,8 @@
                         <th>Firstname</th>
                         <th>Address</th>
                         <th>Mail</th>
-                        <th>Phone_Number</th>
+                        <th>Profil</th>
+						<th>Phone_Number</th>
                         <th>Actions</th>
                     </tr>
                     </thead>
@@ -37,6 +38,9 @@
                             </td>
                               <td>
                                 <?= $User['User']['mail']; ?>
+                            </td>
+							                              <td>
+                                <?= $User['Profile']['profile_name']; ?>
                             </td>
                             <td>
                                 <?= $User['User']['phone_number']; ?>

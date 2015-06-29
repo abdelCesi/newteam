@@ -14,6 +14,10 @@ echo $this->Form->create('User');
     echo $this->Form->input('address');
     echo $this->Form->input('mail');
     echo $this->Form->input('phone_number');
+	echo $this->Form->input('profile_id', array (
+		'label' => 'Profil',
+		'type' => 'select',
+		'class'=>'form-control'));
     echo $this->Form->input('password', array('type'=>'password'));
     echo $this->Form->input('status');
 

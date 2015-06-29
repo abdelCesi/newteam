@@ -59,9 +59,20 @@ class User extends AppModel {
 			'className' => 'Profile',
 			'foreignKey' => 'profile_id',
 			'conditions' => '',
-			'fields' => '',
+			'fields' => 'profile_name',
 			'order' => ''
 		)
 	);
+	
+		// relation Has Many RDV
+    public $hasMany = array(
+        'Rdv' => array(
+            'className' => 'Rdv',
+			'foreignKey' => 'user_id',
+			'conditions' =>'',
+			'fields' => '',
+			'order' => ''
+        )
+    );
 }
 ?>

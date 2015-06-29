@@ -93,7 +93,7 @@ class ProfilesController extends AppController {
 		if (!$this->Profile->exists()) {
 			throw new NotFoundException(__('Invalid profile'));
 		}
-		$this->request->allowMethod('post', 'delete');
+
 		if ($this->Profile->delete()) {
 			$this->Session->setFlash(__('The profile has been deleted.'));
 			return $this -> redirect(array('action' => 'index'));

@@ -15,6 +15,9 @@ class UsersController extends AppController {
         $this->set('users', $this->User->find('all'));
     }
 
+
+	
+	
     public function add(){
 
         //On vérifie si c'est une demande post
@@ -35,6 +38,8 @@ class UsersController extends AppController {
 
             }
         }
+			$profiles=$this->User->Profile->find('list');
+			$this->set(compact('profiles'));
     }
 
     public function view($id = null) {
@@ -43,26 +48,27 @@ class UsersController extends AppController {
         }
         $options = array('conditions' => array('user.' . $this->User->primaryKey => $id));
         $this->set('user', $this->User->find('first', $options));
+		
         $this->initMDP();
         $this->affectSrv();
+		$this->checkRDVdate();
     }
 
     public function edit() {
         //On obtient l'ID de l'utilisateur à éditer
         $id = $this->request->params['pass'][0];
-
+		
         //On définie l' id de l'utilisateur
         $this->User->id = $id;
 
         //On vérifie si un utilisateur existe avec cet id
         if( $this->User->exists() ){
-
+		
             if( $this->request->is( 'post' ) || $this->request->is( 'put' ) ){
 
+		
                 if( $this->User->save( $this->request->data ) ){
-
                     $this->Session->setFlash('Utilisateur édité.');
-
                     $this->redirect(array('action' => 'index'));
 
                 }else{
@@ -73,9 +79,15 @@ class UsersController extends AppController {
 
                 // lecture des données de l'utilisateur
                 //remplissage de notre formulaire en html automatiquement
-                $this->request->data = $this->User->read();
-            }
 
+                $this->request->data = $this->User->read();
+				
+	
+
+            }
+						$profiles=$this->User->Profile->find('list');
+			$this->set(compact('profiles'));
+			$this->render('edit');
         }else{
             //Si il nnous allons indiquer à l'utilisateur qu'il n'y a pas l'utilisateur
             $this->Session->setFlash('L&rsquo;utilisateur que vous essayez de modifier n&rsquo;existe pas .');
@@ -84,8 +96,8 @@ class UsersController extends AppController {
 
         }
 
-
     }
+
 
     public function delete() {
         $id = $this->request->params['pass'][0];
@@ -182,6 +194,11 @@ class UsersController extends AppController {
         }
     }
 
+	
+	public function checkRDVdate(){
+	
+		$this->set('users', $this->User->find('all'));
+	}
 }
 
 ?>
