@@ -107,7 +107,9 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
                         <li><?= $this->Html->link("Rdvs", array('controller' => 'Rdvs','action'=> 'index')); ?></li>
                         <li><?= $this->Html->link("Fonctionalités", array('controller' => 'Functionnalities','action'=> 'index')); ?></li>
+						<li><?= $this->Html->link("Horaire de travail", array('controller' => 'WorkingHours','action'=> 'index')); ?></li>
 						<li><?= $this->Html->link("Dates", array('controller' => 'Dates','action'=> 'index')); ?></li>
+						
                     </ul>
                 </li>
 									<li class="dropdown">
