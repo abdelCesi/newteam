@@ -16,8 +16,9 @@
                         <th>Firstname</th>
                         <th>Address</th>
                         <th>Mail</th>
-                        <th>Profil</th>
-						<th>Phone_Number</th>
+                        <th>Phone_Number</th>
+						<th>Profil</th>
+						<th>Service</th>
                         <th>Actions</th>
                     </tr>
                     </thead>
@@ -39,11 +40,14 @@
                               <td>
                                 <?= $User['User']['mail']; ?>
                             </td>
-							                              <td>
-                                <?= $User['Profile']['profile_name']; ?>
-                            </td>
                             <td>
                                 <?= $User['User']['phone_number']; ?>
+                            </td>
+							 <td>
+                                <?= $User['Profile']['profile_name']; ?>
+                            </td>							
+							<td>
+                                <?= $User['Service']['service_name']; ?>
                             </td>
                             <td>
 

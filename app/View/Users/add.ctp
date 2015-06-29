@@ -16,7 +16,12 @@ echo $this->Form->create('User');
 		'label' => 'Profil',
 		'type' => 'select',
 		'class'=>'form-control'));
+	echo $this->Form->input('service_id', array (
+		'label' => 'Service',
+		'type' => 'select',
+		'class'=>'form-control'));
     echo $this->Form->input('password', array('type'=>'password'));
+
  
 
 	echo $this->Form->submit('Créer', 

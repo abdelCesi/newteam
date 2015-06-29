@@ -36,8 +36,14 @@
 </h4>
 <h4>
 	<label for="catalog">
-		<b>Etat :</b>
-		<?php echo h($user['User']['status']); ?>
+		<b>Profil :</b>
+		<?php echo h($user['Profile']['profile_name']); ?>
+	</label>
+</h4>
+<h4>
+	<label for="catalog">
+		<b>Service :</b>
+		<?php echo h($user['Service']['service_name']); ?>
 	</label>
 </h4>
 
@@ -86,7 +92,7 @@
 ?>
 <?= $this->Html->link(
     $affect,
-    array('controller' => 'Users','action'=> 'affectSrv', $user['User']['id']),
+    array('controller' => 'Users','action'=> 'affectSrv', $user['Service']['id']),
     array('escape' => false, 'style' => "float:left;margin-left:10px"));
 ?>
 <!-- Modal initialise password -->
@@ -100,10 +106,7 @@
             <div class="modal-body">
             	<?php
 					echo $this->Form->create('User');
-					echo $this->Form->input('service_id', array(
-										      'options' => $services,
-										      'empty' => '(choisissez)'
-											));
+					echo $this->Form->input('service_id');
 				?>
             </div>
             <div class="modal-footer">
@@ -115,6 +118,7 @@
         </div>
     </div>
 </div>
+
 <?php
 	$init_pwd = "<a href='#checkRDVdate' class='pull-left btn btn-sm btn-success' data-toggle='modal'>
 					Consulter mes rdvs

@@ -13,6 +13,7 @@ class UsersController extends AppController {
     public function index() {
         //pour récupérer tous les utilisateurs
         $this->set('users', $this->User->find('all'));
+		
     }
 
 
@@ -39,16 +40,19 @@ class UsersController extends AppController {
             }
         }
 			$profiles=$this->User->Profile->find('list');
-			$this->set(compact('profiles'));
+			$services=$this->User->Service->find('list');
+			$this->set(compact('profiles', 'services'));
     }
 
     public function view($id = null) {
         if (!$this->User->exists($id)) {
             throw new NotFoundException(__('Invalid User'));
         }
+		
         $options = array('conditions' => array('user.' . $this->User->primaryKey => $id));
         $this->set('user', $this->User->find('first', $options));
-		
+		$services=  $this->set('services', $this->User->Service->find('list'));
+		/*$this->set(compact('services'));*/
         $this->initMDP();
         $this->affectSrv();
 		$this->checkRDVdate();
@@ -85,8 +89,9 @@ class UsersController extends AppController {
 	
 
             }
-						$profiles=$this->User->Profile->find('list');
-			$this->set(compact('profiles'));
+			$profiles=$this->User->Profile->find('list');
+			$services=$this->User->Service->find('list');
+			$this->set(compact('profiles', 'services'));
 			$this->render('edit');
         }else{
             //Si il nnous allons indiquer à l'utilisateur qu'il n'y a pas l'utilisateur
@@ -151,6 +156,7 @@ class UsersController extends AppController {
                 // lecture des données de l'utilisateur
                 //remplissage de notre formulaire en html automatiquement
                 $this->request->data = $this->User->read();
+				
             }
 
         }else{
@@ -177,19 +183,21 @@ class UsersController extends AppController {
         if( $this->User->exists() ){
             if( $this->request->is( 'post' ) || $this->request->is( 'put' ) ){
                 if( $this->User->save( $this->request->data ) ){
-                    $this->Session->setFlash('Mot de passe édité.');
+                    $this->Session->setFlash('Service affecté.');
+					$this->here;
                 }else{
-                    $this->Session->setFlash('Impossible de modifier le mot de passe. S&rsquo;il vous plaît , essayez de nouveau .');
+                    $this->Session->setFlash('Impossible d\'affecter le service. S&rsquo;il vous plaît , essayez de nouveau .');
                 }
             }else{
                 // lecture des données de l'utilisateur
                 //remplissage de notre formulaire en html automatiquement
                 $this->request->data = $this->User->read();
+				
             }
 
         }else{
             //Si il nnous allons indiquer à l'utilisateur qu'il n'y a pas l'utilisateur
-            $this->Session->setFlash('Le mot de passe de l&rsquo;utilisateur que vous essayez de modifier n&rsquo;existe pas .');
+            $this->Session->setFlash('Le service de l&rsquo;utilisateur que vous essayez de modifier n&rsquo;existe pas .');
             //$this->redirect(array('action' => 'view'));
         }
     }
