@@ -23,8 +23,8 @@ class Functionnality extends AppModel {
  * @var array
  */
 	public $hasMany = array(
-		'Profil' => array(
-			'className' => 'Profil',
+		'Profilfunctionnality' => array(
+			'className' => 'Profilfunctionnality',
 			'foreignKey' => 'functionnality_id',
 			'dependent' => false,
 			'conditions' => '',
