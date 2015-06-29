@@ -95,7 +95,7 @@ class ProfilfunctionnalitiesController extends AppController {
 		if (!$this->Profilfunctionnality->exists()) {
 			throw new NotFoundException(__('Invalid profilfunctionnality'));
 		}
-		$this->request->allowMethod('post', 'delete');
+		//$this->request->allowMethod('post', 'delete');
 		if ($this->Profilfunctionnality->delete()) {
 			$this->Session->setFlash(__('The profilfunctionnality has been deleted.'));
 			return $this -> redirect(array('action' => 'index'));

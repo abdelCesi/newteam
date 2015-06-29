@@ -89,7 +89,7 @@ class WorkingHoursController extends AppController {
 		if (!$this->WorkingHour->exists()) {
 			throw new NotFoundException(__('Invalid working hour'));
 		}
-		$this->request->allowMethod('post', 'delete');
+		//$this->request->allowMethod('post', 'delete');
 		if ($this->WorkingHour->delete()) {
 			$this->Session->setFlash(__('The working hour has been deleted.'));
 			return $this -> redirect(array('action' => 'index'));
