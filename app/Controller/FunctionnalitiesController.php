@@ -89,7 +89,7 @@ class FunctionnalitiesController extends AppController {
 		if (!$this->Functionnality->exists()) {
 			throw new NotFoundException(__('Invalid functionnality'));
 		}
-		$this->request->allowMethod('post', 'delete');
+		//$this->request->allowMethod('post', 'delete');
 		if ($this->Functionnality->delete()) {
 			$this->Session->setFlash(__('The functionnality has been deleted.'));
 			return $this -> redirect(array('action' => 'index'));
