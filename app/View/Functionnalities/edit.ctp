@@ -4,7 +4,8 @@
 <?php
 //formulaire d'ajout , nommage des noms de colonnes pareil que ceux en base
 echo $this->Form->create('Functionnality');
-
+	
+	echo $this->Form->input('id');
     echo $this->Form->input('name');
     echo $this->Form->input('function_type');
     echo $this->Form->input('description');
