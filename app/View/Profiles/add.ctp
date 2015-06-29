@@ -2,7 +2,7 @@
 
 <h2>Ajouter un profil</h2>
 
-<!-- Page d'ajout d'un utilisateur -->
+<!-- Page d'ajout d'un profil -->
 
 <?php
 //formulaire d'ajout , nommage des noms de colonnes pareil que ceux en base
