@@ -23,7 +23,8 @@
                                 <?= $profile['Profile']['profile_name']; ?>
                             </td>
                             <td>
-                                <?= $profile['Profile']['working_hour_id']; ?>
+								<?php $workinghourid=$profile['Profile']['working_hour_id'] ?>
+                                <?= $workingHours[$workinghourid]['team_code']; ?>
 
                                 <?php
                                 $btn_edit = "<button type='button' class='btn btn-default btn-xs' aria-label='Left Align'>
@@ -39,7 +40,7 @@
                                     $btn_delete,
                                     array('controller' => 'Profiles','action'=> 'delete', $profile['Profile']['id']),
                                     array('escape' => false, 'style' => "float:right;margin-left:10px"),
-                                    "Are you sure you wish to delete the City : ".$profile['Profile']['profile_name']
+                                    "Voulez vous supprimer ce profil : ".$profile['Profile']['profile_name']
                                 );
                                 ?>
 

@@ -23,6 +23,8 @@ class ProfilesController extends AppController {
 	public function index() {
 		$this->Profile->recursive = 0;
 		$this->set('profiles', $this->Paginator->paginate());
+		$workingHours = $this->Profile->WorkingHour->find('all');
+		$this->set(compact('workingHours'));
 	}
 
 /**
@@ -53,8 +55,9 @@ class ProfilesController extends AppController {
 				return $this -> redirect(array('action' => 'index'));
 			}
 		}
-		$workingHours = $this->Profile->WorkingHour->find('list');
-		$this->set(compact('workingHours'));
+		$workingHours = $this->Profile->WorkingHour->find('list', array(
+		'fields' => array('WorkingHour.id','WorkingHour.team_code')));
+		$this->set(compact('dependencies', 'workingHours'));
 	}
 
 /**
@@ -77,8 +80,9 @@ class ProfilesController extends AppController {
 			$options = array('conditions' => array('Profile.' . $this->Profile->primaryKey => $id));
 			$this->request->data = $this->Profile->find('first', $options);
 		}
-		$workingHours = $this->Profile->WorkingHour->find('list');
-		$this->set(compact('workingHours'));
+		$workingHours = $this->Profile->WorkingHour->find('list', array(
+		'fields' => array('WorkingHour.id','WorkingHour.team_code')));
+		$this->set(compact('dependencies', 'workingHours'));
 	}
 
 /**
