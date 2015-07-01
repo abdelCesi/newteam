@@ -56,7 +56,7 @@ class ContainersController extends AppController {
 			}
 		}
 		$places = $this->Container->Place->find('list');
-		$packings = $this->Container->Packing->find('list');
+		$packings = $this->Container->Packing->find('list',  array('fields' => array('Packing.id', 'Packing.label')));
 		$receptionorders = $this->Container->Receptionorder->find('list');
 		$shippingorders = $this->Container->Shippingorder->find('list');
 		$this->set(compact('places', 'packings', 'receptionorders', 'shippingorders'));
@@ -85,7 +85,7 @@ class ContainersController extends AppController {
 			$this->request->data = $this->Container->find('first', $options);
 		}
 		$places = $this->Container->Place->find('list');
-		$packings = $this->Container->Packing->find('list');
+		$packings = $this->Container->Packing->find('list',  array('fields' => array('Packing.id', 'Packing.label')));
 		$receptionorders = $this->Container->Receptionorder->find('list');
 		$shippingorders = $this->Container->Shippingorder->find('list');
 		$this->set(compact('places', 'packings', 'receptionorders', 'shippingorders'));
@@ -111,4 +111,28 @@ class ContainersController extends AppController {
 		}
 		return $this->redirect(array('action' => 'index'));
 	}
+
+	/*public function moveContainer($container_id, $place_id){
+
+		$this->Container->id = $container_id;
+		//$this->Container->Place->id = $place_id;
+		if (!$this->Container->exists()) {
+			throw new NotFoundException(__('Invalid container'));
+			//return false;
+		}else{
+			//$this->Container->read(null, 1);
+			$this->Container->set('place_id', $place_id);
+			if ($this->Container->save()){
+				$this->Session->setFlash(__('The container has been moved.'));
+				//return true;
+			}else{
+				$this->Session->setFlash(__('The container could not be moved. Please, try again.'));
+				//return false;
+			}	
+			return $this->redirect(array('action' => 'index'));
+		}
+
+	}*/
+
+
 }

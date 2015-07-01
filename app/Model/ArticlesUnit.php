@@ -15,5 +15,20 @@ class ArticlesUnit extends AppModel{
         )
     );
 
+    public function search($content) {
+        $result = $this->find('all',
+            array('order' => array('ArticlesUnit.id ASC'),
+                'conditions' => array('OR' => array(
+                    'RefArticle.reference LIKE' => '%'.$content.'%',
+                    'ArticlesUnit.validity_date LIKE' => '%'.$content.'%',
+                    'ArticlesUnit.nb_article LIKE' => '%'.$content.'%',
+                    'Container.code LIKE' => '%'.$content.'%')
+                )
+            )
+        );
+
+        return $result;
+    }
+
 }
 ?>

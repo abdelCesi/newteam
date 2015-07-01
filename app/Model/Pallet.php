@@ -58,4 +58,11 @@ class Pallet extends AppModel {
 			'order' => ''
 		)
 	);
+
+    public $hasMany = array(
+        'Box' => array(
+            'className' => 'Box',
+            'foreignKey' => 'pallet_id'
+        )
+    );  
 }

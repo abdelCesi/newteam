@@ -10,6 +10,7 @@
 
 	echo $this->Form->create('ClassesArticle');
 	echo $this->Form->input('label');
+	echo "<p>Classe parent</p>";
 	echo $this->Form->select('classe_id', $classesarticles);
 
 	echo $this->Form->submit('Sauvegarder la classe', 

@@ -53,7 +53,7 @@
 								<?php echo $this->Html->link($container['Place']['name'], array('controller' => 'places', 'action' => 'view', $container['Place']['id'])); ?>
 							</td>
 							<td>
-								<?php echo $this->Html->link($container['Packing']['id'], array('controller' => 'packings', 'action' => 'view', $container['Packing']['id'])); ?>
+								<?php echo $this->Html->link($container['Packing']['label'], array('controller' => 'packings', 'action' => 'view', $container['Packing']['id'])); ?>
 							</td>
                             <td>
 

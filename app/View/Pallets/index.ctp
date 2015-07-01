@@ -38,9 +38,9 @@
                     <tbody>
 						 <?php foreach ($pallets as $pallet): ?>
 						<tr>
-							<td><?php echo h($pallet['Box']['id']); ?>&nbsp;</td>
+							<td><?php echo h($pallet['Pallet']['id']); ?>&nbsp;</td>
 							<td>
-								<?php echo $this->Html->link($pallet['Pallet']['id'], array('controller' => 'Boxes', 'action' => 'view', $pallet['Pallet']['id'])); ?>
+								<?php echo $this->Html->link($pallet['Container']['id'], array('controller' => 'Boxes', 'action' => 'view', $pallet['Container']['id'])); ?>
 							</td>
 							<td>
 
@@ -56,7 +56,7 @@
 
                                 <?= $this->Html->link(
                                     $btn_delete,
-                                    array('controller' => 'Boxes','action'=> 'delete', $pallet['Pallet']['id']),
+                                    array('controller' => 'Pallets','action'=> 'delete', $pallet['Pallet']['id']),
                                     array('escape' => false, 'style' => "margin-left:10px"),
                                     "Are you sure you wish to delete the pallet : ".$pallet['Pallet']['id']
                                 );
@@ -64,7 +64,7 @@
 
                                 <?= $this->Html->link(
                                     $btn_edit,
-                                    array('controller' => 'Boxes','action'=> 'edit', $pallet['Pallet']['id']),
+                                    array('controller' => 'Pallets','action'=> 'edit', $pallet['Pallet']['id']),
                                     array('escape' => false, 'style' => "float:left;margin-left:10px"));
                                 ?>
                             </td>

@@ -34,16 +34,18 @@
                     <thead>
                     <tr>
 						<th><?php echo $this->Paginator->sort('id'); ?></th>
+                        <th><?php echo $this->Paginator->sort('label'); ?></th>
 						<th><?php echo $this->Paginator->sort('length_id'); ?></th>
 						<th><?php echo $this->Paginator->sort('width_id'); ?></th>
 						<th><?php echo $this->Paginator->sort('height_id'); ?></th>
-						<th class="actions"><?php echo __('Actions'); ?></th>
+						<th class="actions">Actions</th>
                     </tr>
                     </thead>
                     <tbody>
                     <?php foreach ($packings as $packing): ?>
 						<tr>
-							<td><?php echo h($packing['Packing']['id']); ?>&nbsp;</td>
+                            <td><?php echo h($packing['Packing']['id']); ?></td>
+							<td><?php echo h($packing['Packing']['label']); ?></td>
 							<td>
 								<?php echo $this->Html->link($packing['Length']['length'], array('controller' => 'lengths', 'action' => 'view', $packing['Length']['id'])); ?>
 							</td>
@@ -75,7 +77,7 @@
 
                                 <?= $this->Html->link(
                                     $btn_edit,
-                                    array('controller' => 'Packings','action'=> 'edit', $container['Packing']['id']),
+                                    array('controller' => 'Packings','action'=> 'edit', $packing['Packing']['id']),
                                     array('escape' => false, 'style' => "float:left;margin-left:10px"));
                                 ?>
                             </td>

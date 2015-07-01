@@ -4,10 +4,11 @@
 
 <?php
 //formulaire d'ajout , nommage des noms de colonnes pareil que ceux en base
-echo $this->Form->create('User');
+echo $this->Form->create('ArticlesUnit');
 
 		echo $this->Form->input('container_id');
 		echo $this->Form->input('validity_date');
+		echo $this->Form->input('nb_article');
 		echo $this->Form->input('ref_article_id');
 		
 	echo $this->Form->submit('Créer', 

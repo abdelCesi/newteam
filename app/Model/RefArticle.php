@@ -25,6 +25,21 @@ class RefArticle extends AppModel{
         )
     );  
 
+    public function search($content) {
+        $result = $this->find('all',
+            array('order' => array('RefArticle.id ASC'),
+                'conditions' => array('OR' => array(
+                    'RefArticle.reference LIKE' => '%'.$content.'%',
+                    'RefArticle.label LIKE' => '%'.$content.'%',
+                    'CatalogsArticle.label LIKE' => '%'.$content.'%',
+                    'ClassesArticle.label LIKE' => '%'.$content.'%')
+                )
+            )
+        );
+
+        return $result;
+    }
+
 }
 
 ?>

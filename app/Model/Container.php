@@ -191,4 +191,27 @@ class Container extends AppModel {
 		)
 	);
 
+	/**
+	 * move container method
+	 *
+	 * @throws NotFoundException
+	 * @param string $container_id, string &place_id
+	 * @return boolean
+	 */
+	public function moveContainer($container_id, $place_id){
+
+		$this->Container->id = $container_id;
+		if (!$this->Container->exists()) {
+			return false;
+		}else{
+			$this->Container->set('place_id', $place_id);
+			if ($this->Container->save()){
+				return true;
+			}else{
+				return false;
+			}
+		}
+
+	}
+
 }

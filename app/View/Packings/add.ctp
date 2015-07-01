@@ -6,6 +6,7 @@
 //formulaire d'ajout , nommage des noms de colonnes pareil que ceux en base
 echo $this->Form->create('Packing');
 
+		echo $this->Form->input('label');
 		echo $this->Form->input('length_id');
 		echo $this->Form->input('width_id');
 		echo $this->Form->input('height_id');

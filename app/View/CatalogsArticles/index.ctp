@@ -6,7 +6,7 @@
         <div class="container">
             <h1>Les catalogues</h1>
             <div class="table-responsive">
-			<h5><?php echo $this->Html->link('Ajouter un catalogue', array('action' => 'add')); ?></h5>
+			<h5><?php echo $this->Html->link('Ajouter un catalogue', array('action' => 'add'), array( 'class' => 'btn btn-sm btn-primary')); ?></h5>
                 <table class="table table-hover table-bordered">
                     <thead>
                     <tr>

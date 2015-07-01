@@ -3,7 +3,7 @@
     <div class="panel-body">
         <div class="container">
             <h1>Les classes</h1>
-			<h5><?php echo $this->Html->link('Ajouter une classe', array('action' => 'add')); ?></h5>
+			<h5><?php echo $this->Html->link('Ajouter une classe', array('action' => 'add'), array( 'class' => 'btn btn-sm btn-primary')); ?></h5>
             <div class="table-responsive">
                 <table class="table table-hover table-bordered">
                     <thead>

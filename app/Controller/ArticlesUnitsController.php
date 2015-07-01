@@ -21,8 +21,18 @@ class ArticlesUnitsController extends AppController {
  * @return void
  */
 	public function index() {
-		$this->ArticlesUnit->recursive = 0;
-		$this->set('articlesUnits', $this->Paginator->paginate());
+		//$this->ArticlesUnit->recursive = 0;
+		//$this->set('articlesUnits', $this->Paginator->paginate());
+
+        if(!empty($this->request->data['ArticlesUnit']['search'])) {
+
+            $search = $this->request->data['ArticlesUnit']['search'];
+
+            $this->set('articlesUnits', $this->ArticlesUnit->search($search));
+
+        } else {
+            $this->set('articlesUnits', $this->ArticlesUnit->find('all', array('order' => array('ArticlesUnit.id ASC'))));
+        }
 	}
 
 /**
@@ -55,8 +65,8 @@ class ArticlesUnitsController extends AppController {
 				$this->Session->setFlash(__('The articles unit could not be saved. Please, try again.'));
 			}
 		}
-		$refArticles = $this->ArticlesUnit->RefArticle->find('list');
-		$containers = $this->ArticlesUnit->Container->find('list');
+		$refArticles = $this->ArticlesUnit->RefArticle->find('list', array('fields' => array('RefArticle.id', 'RefArticle.reference')));
+		$containers = $this->ArticlesUnit->Container->find('list', array('fields' => array('Container.id', 'Container.code')));
 		$this->set(compact('refArticles', 'containers'));
 	}
 
@@ -82,9 +92,10 @@ class ArticlesUnitsController extends AppController {
 			$options = array('conditions' => array('ArticlesUnit.' . $this->ArticlesUnit->primaryKey => $id));
 			$this->request->data = $this->ArticlesUnit->find('first', $options);
 		}
-		$refArticles = $this->ArticlesUnit->RefArticle->find('list');
-		$containers = $this->ArticlesUnit->Container->find('list');
+		$refArticles = $this->ArticlesUnit->RefArticle->find('list', array('fields' => array('RefArticle.id', 'RefArticle.reference')));
+		$containers = $this->ArticlesUnit->Container->find('list', array('fields' => array('Container.id', 'Container.code')));
 		$this->set(compact('refArticles', 'containers'));
+		$this->render('edit');
 	}
 
 /**

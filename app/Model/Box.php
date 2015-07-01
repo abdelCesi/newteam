@@ -1,5 +1,6 @@
 <?php
 App::uses('AppModel', 'Model');
+//App::uses('model', 'Container');
 /**
  * Box Model
  *
@@ -60,6 +61,13 @@ class Box extends AppModel {
 		'Container' => array(
 			'className' => 'Container',
 			'foreignKey' => 'container_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'Pallet' => array(
+			'className' => 'Pallet',
+			'foreignKey' => 'pallet_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

@@ -41,7 +41,7 @@
 						<tr>
 							<td><?php echo h($box['Box']['id']); ?>&nbsp;</td>
 							<td>
-								<?php echo $this->Html->link($box['Boxes']['id'], array('controller' => 'Boxes', 'action' => 'view', $box['Box']['id'])); ?>
+								<?php echo $this->Html->link($box['Container']['id'], array('controller' => 'Boxes', 'action' => 'view', $box['Container']['id'])); ?>
 							</td>
 							<td>
 

@@ -15,7 +15,7 @@ echo $this->Form->create('Container');
 		echo $this->Form->input('Receptionorder');
 		echo $this->Form->input('Shippingorder');
 
-	echo $this->Form->submit('Créer', 
+	echo $this->Form->submit('Modifier', 
         array('after' => $this->Html->link('Annuler', array('action' => 'index'), array('class' => 'btn btn-default', 'style' => 'margin-left:10px'), "Etes-vous sûr de quitter cette page ?"))
     );
     echo $this->Form->end();

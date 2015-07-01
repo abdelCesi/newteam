@@ -12,8 +12,19 @@ class RefArticlesController extends AppController{
     );
 
     public function index() {
-        $this->set('refarticles', $this->RefArticle->find('all'));
-        $this->set('refarticles', $this->Paginator->paginate());
+        //$this->set('refarticles', $this->RefArticle->find('all'));
+        //$this->set('refarticles', $this->Paginator->paginate());
+
+        if(!empty($this->request->data['RefArticle']['search'])) {
+
+            $search = $this->request->data['RefArticle']['search'];
+
+            $this->set('refarticles', $this->RefArticle->search($search));
+
+        } else {
+            $this->set('refarticles', $this->RefArticle->find('all', array('order' => array('RefArticle.id ASC'))));
+        }
+
     }	
 
     public function view($id = null) {
