@@ -58,13 +58,13 @@ class Box extends AppModel {
  * @var array
  */
 	public $belongsTo = array(
-		'Container' => array(
+		/*'Container' => array(
 			'className' => 'Container',
 			'foreignKey' => 'container_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
-		),
+		),*/
 		'Pallet' => array(
 			'className' => 'Pallet',
 			'foreignKey' => 'pallet_id',

@@ -1,26 +1,14 @@
-
-
-<h2>Ajouter un conteneur</h2>
-
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-        </div>
-		
-		
+<h2>Ajouter un conteneur</h2>		
 		
 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
 				 <li class="first"><?php echo $this->Html->link(__('Listes des conteneurs'), array('action' => 'index')); ?></li>
-				<li><?php echo $this->Html->link(__('Gérer les cartons'), array('controller' => 'boxes', 'action' => 'index')); ?></li>
-				<li><?php echo $this->Html->link(__('Gérer les palettes'), array('controller' => 'pallets', 'action' => 'index')); ?> </li>
+
+                <li><?php echo $this->Html->link(__('Gérer les types de contenants'), array('controller' => 'ContainersTypes', 'action' => 'index')); ?> </li>
+
+				<!--<li><?php echo $this->Html->link(__('Gérer les cartons'), array('controller' => 'boxes', 'action' => 'index')); ?> </li>
+
+				<li><?php echo $this->Html->link(__('Gérer les palettes'), array('controller' => 'pallets', 'action' => 'index')); ?> </li>-->
 			</ul>
  </div>
  
@@ -32,8 +20,21 @@ echo $this->Form->create('Container');
 
 		echo $this->Form->input('code');
 		echo $this->Form->input('status');
-		echo $this->Form->input('place_id');
-		echo $this->Form->input('packing_id');
+		//echo $this->Form->input('containerType_id');
+		echo $this->Form->input('containerType_id', array(
+					      'options' => $containerstypes,
+					      'empty' => '(choisissez)'
+						));
+		//echo $this->Form->input('place_id');
+		echo $this->Form->input('place_id', array(
+					      'options' => $places,
+					      'empty' => '(choisissez)'
+						));
+		//echo $this->Form->input('packing_id');
+		echo $this->Form->input('packing_id', array(
+					      'options' => $packings,
+					      'empty' => '(choisissez)'
+						));
 		echo $this->Form->input('Receptionorder');
 		echo $this->Form->input('Shippingorder');
 		

@@ -50,7 +50,7 @@ class Container extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'place_id' => array(
+		/*'place_id' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
 				//'message' => 'Your custom message here',
@@ -59,7 +59,7 @@ class Container extends AppModel {
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
-		),
+		),*/
 		'packing_id' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
@@ -70,6 +70,16 @@ class Container extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
+		'containerType_id' => array(
+			'notEmpty' => array(
+				'rule' => array('notEmpty'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		)
 	);
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
@@ -93,8 +103,25 @@ class Container extends AppModel {
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
+		),
+		'ContainersType' => array(
+			'className' => 'ContainersType',
+			'foreignKey' => 'containerType_id'
 		)
 	);
+
+	public $hasOne = array(
+		'Box' => array(
+			'className' => 'Box',
+			'foreignKey' => 'container_id',
+			'dependent' => false
+		),
+		'Pallet' => array(
+			'className' => 'Pallet',
+			'foreignKey' => 'container_id',
+			'dependent' => false
+		)
+		);
 
 /**
  * hasMany associations
@@ -115,7 +142,7 @@ class Container extends AppModel {
 			'finderQuery' => '',
 			'counterQuery' => ''
 		),
-		'Box' => array(
+		/*'Box' => array(
 			'className' => 'Box',
 			'foreignKey' => 'container_id',
 			'dependent' => false,
@@ -127,7 +154,7 @@ class Container extends AppModel {
 			'exclusive' => '',
 			'finderQuery' => '',
 			'counterQuery' => ''
-		),
+		),*/
 		'Moveorder' => array(
 			'className' => 'Moveorder',
 			'foreignKey' => 'container_id',
@@ -140,7 +167,7 @@ class Container extends AppModel {
 			'exclusive' => '',
 			'finderQuery' => '',
 			'counterQuery' => ''
-		),
+		)/*,
 		'Pallet' => array(
 			'className' => 'Pallet',
 			'foreignKey' => 'container_id',
@@ -153,7 +180,7 @@ class Container extends AppModel {
 			'exclusive' => '',
 			'finderQuery' => '',
 			'counterQuery' => ''
-		)
+		)*/
 	);
 
 
@@ -200,11 +227,32 @@ class Container extends AppModel {
 	 */
 	public function moveContainer($container_id, $place_id){
 
+        /* Code emplacement */
+        $place = new Place();
+        /* end */
+
 		$this->Container->id = $container_id;
 		if (!$this->Container->exists()) {
 			return false;
 		}else{
+
+            /* Code emplacement */
+            $Place = $place->find('first', array(
+                'conditions' => array('Place.id' => $this->Container->id)
+            ));
+            /* end */
+
 			$this->Container->set('place_id', $place_id);
+
+            /* Code emplacement */
+            if ($place_id != '') {
+                $Place->set('free', 1);
+            }
+            else {
+                $Place->set('free', 0);
+            }
+            /* end */
+
 			if ($this->Container->save()){
 				return true;
 			}else{
@@ -213,5 +261,22 @@ class Container extends AppModel {
 		}
 
 	}
+
+    public function search($content) {
+        $result = $this->find('all',
+            array('order' => array('Container.id ASC'),
+                'conditions' => array('OR' => array(
+                    'Container.id LIKE' => '%'.$content.'%',
+                    'Container.code LIKE' => '%'.$content.'%',
+                    'Container.status LIKE' => '%'.$content.'%',
+                    'ContainersType.label LIKE' => '%'.$content.'%',
+                    'Place.name LIKE' => '%'.$content.'%',
+                    'Packing.label LIKE' => '%'.$content.'%')
+                )
+            )
+        );
+
+        return $result;
+    }
 
 }

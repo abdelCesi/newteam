@@ -21,8 +21,18 @@ class ContainersController extends AppController {
  * @return void
  */
 	public function index() {
-		$this->Container->recursive = 0;
-		$this->set('containers', $this->Paginator->paginate());
+		//$this->Container->recursive = 0;
+        $this->set('containers', $this->Paginator->paginate());
+
+        if(!empty($this->request->data['Container']['search'])) {
+
+            $search = $this->request->data['Container']['search'];
+
+            $this->set('containers', $this->Container->search($search));
+
+        } else {
+            $this->set('containers', $this->Container->find('all', array('order' => array('Container.id ASC'))));
+        }
 	}
 
 /**
@@ -56,10 +66,11 @@ class ContainersController extends AppController {
 			}
 		}
 		$places = $this->Container->Place->find('list');
-		$packings = $this->Container->Packing->find('list',  array('fields' => array('Packing.id', 'Packing.label')));
+		$packings = $this->Container->Packing->find('list', array('fields' => array('Packing.id', 'Packing.label')));
+		$containerstypes = $this->Container->ContainersType->find('list', array('fields' => array('ContainersType.id', 'ContainersType.label')));
 		$receptionorders = $this->Container->Receptionorder->find('list');
 		$shippingorders = $this->Container->Shippingorder->find('list');
-		$this->set(compact('places', 'packings', 'receptionorders', 'shippingorders'));
+		$this->set(compact('places', 'packings', 'containerstypes', 'receptionorders', 'shippingorders'));
 	}
 
 /**
@@ -86,9 +97,10 @@ class ContainersController extends AppController {
 		}
 		$places = $this->Container->Place->find('list');
 		$packings = $this->Container->Packing->find('list',  array('fields' => array('Packing.id', 'Packing.label')));
+		$containerstypes = $this->Container->ContainersType->find('list', array('fields' => array('ContainersType.id', 'ContainersType.label')));
 		$receptionorders = $this->Container->Receptionorder->find('list');
 		$shippingorders = $this->Container->Shippingorder->find('list');
-		$this->set(compact('places', 'packings', 'receptionorders', 'shippingorders'));
+		$this->set(compact('places', 'packings', 'containerstypes', 'receptionorders', 'shippingorders'));
 	}
 
 /**

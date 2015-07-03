@@ -4,12 +4,12 @@
         <div class="container">
             <h1>Unité article</h1>
             <div class="row">
-              <div class="col-md-4">
+              <div class="col-md-8">
                 <h5>
                     <?= $this->Html->link("Ajouter une unité article", array('controller' => 'ArticlesUnits','action'=> 'add'), array( 'class' => 'btn btn-sm btn-primary')); ?>
                 </h5>
               </div>
-              <div class="col-md-8">
+              <div class="col-md-4">
                 <?php echo $this->Form->create('ArticlesUnit'); ?>
                 <?php echo $this->Form->input('search', array('label' => false,'placeholder' => 'Recherche ...')); ?>
                 <?php echo $this->Form->End(); ?>
@@ -44,7 +44,7 @@
                                 <?= $articlesUnit['ArticlesUnit']['nb_article']; ?>
                             </td>
                             <td>
-                                <?= $this->Html->link($articlesUnit['Container']['code'], array('controller' => 'containers', 'action' => 'view', $articlesUnit['Container']['code']));  ?>
+                                <?= $this->Html->link($articlesUnit['Container']['code'], array('controller' => 'containers', 'action' => 'view', $articlesUnit['Container']['id']));  ?>
                             </td>
 
                             <td>

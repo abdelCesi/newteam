@@ -49,7 +49,7 @@ class Pallet extends AppModel {
  *
  * @var array
  */
-	public $belongsTo = array(
+	/*public $belongsTo = array(
 		'Container' => array(
 			'className' => 'Container',
 			'foreignKey' => 'container_id',
@@ -57,7 +57,7 @@ class Pallet extends AppModel {
 			'fields' => '',
 			'order' => ''
 		)
-	);
+	);*/
 
     public $hasMany = array(
         'Box' => array(
