@@ -32,19 +32,6 @@ class Profile extends AppModel {
  * @var array
  */
 	public $hasMany = array(
-		'Profilfunctionnality' => array(
-			'className' => 'Profilfunctionnality',
-			'foreignKey' => 'profile_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		),
 		'User' => array(
 			'className' => 'User',
 			'foreignKey' => 'profile_id',
@@ -59,5 +46,10 @@ class Profile extends AppModel {
 			'counterQuery' => ''
 		)
 	);
-
+/**
+ * hasAndBelongsToMany associations
+ *
+ * @var array
+ */	
+	public $hasAndBelongsToMany = array( 'Functionnality' => array( 'className' => 'Functionnality', 'joinTable' => 'profilfunctionnalities') );
 }

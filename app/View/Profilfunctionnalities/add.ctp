@@ -1,20 +1,21 @@
-<div class="profilfunctionnalities form">
-<?php echo $this->Form->create('Profilfunctionnality'); ?>
-	<fieldset>
-		<legend><?php echo __('Add Profilfunctionnality'); ?></legend>
-	<?php
-		echo $this->Form->input('profile_id');
-		echo $this->Form->input('functionnality_id');
-	?>
-	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('List Profilfunctionnalities'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Profiles'), array('controller' => 'profiles', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Functionnalities'), array('controller' => 'functionnalities', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Working Hours'), array('controller' => 'working_hours', 'action' => 'index')); ?> </li>		
-	</ul>
-</div>
+
+
+<h2>Ajouter d'une association Profil/Fonctionnalit&eacute;</h2>
+
+<!-- Page d'ajout d'une association Profil/Fonctionnalité -->
+
+<?php
+//formulaire d'ajout , nommage des noms de colonnes pareil que ceux en base
+	echo $this->Form->create('Profilfunctionnality', 
+		array('inputDefaults'=>array('div'=>'false', 'label'=>false)));
+	
+	echo $this->Form->input('profile_id',
+			array('type'=>'select','options'=>$profiles, 'label' => 'Nom du profil&nbsp;'));
+	echo $this->Form->input('functionnality_id',
+			array('type'=>'select','options'=>$functionnalities, 'label' => 'Nom de la fonctionnalit&eacute;&nbsp;'));
+
+	echo $this->Form->submit('Valider', 
+        array('after' => $this->Html->link('Annuler', array('action' => 'index'), array('class' => 'btn btn-default', 'style' => 'margin-left:10px')))
+    );
+
+?>

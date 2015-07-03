@@ -23,10 +23,16 @@
                                 <?= $profile['Profile']['profile_name']; ?>
                             </td>
                             <td>
-								<?php $workinghourid=$profile['Profile']['working_hour_id'] ?>
-                                <?= $workingHours[$workinghourid]['team_code']; ?>
+                                <?= "Team : ".$profile['WorkingHour']['team_code'].
+								"  ||  Start at : ".$profile['WorkingHour']['start_time'].
+								"  ||  End at : ".$profile['WorkingHour']['end_time']; ?>
 
                                 <?php
+								
+								$btn_view = "<button type='button' class='btn btn-default btn-xs' aria-label='Left Align'>
+                                                <span class='glyphicon glyphicon-info-sign' aria-hidden='true'></span>
+                                            </button>";
+											
                                 $btn_edit = "<button type='button' class='btn btn-default btn-xs' aria-label='Left Align'>
                                                 <span class='glyphicon glyphicon-pencil' aria-hidden='true'></span>
                                             </button>";
@@ -35,7 +41,7 @@
                                                 <span class='glyphicon glyphicon-remove' aria-hidden='true'></span>
                                             </button>";
                                 ?>
-
+																
                                 <?= $this->Html->link(
                                     $btn_delete,
                                     array('controller' => 'Profiles','action'=> 'delete', $profile['Profile']['id']),
@@ -47,6 +53,12 @@
                                 <?= $this->Html->link(
                                     $btn_edit,
                                     array('controller' => 'Profiles','action'=> 'edit', $profile['Profile']['id']),
+                                    array('escape' => false, 'style' => "float:right;margin-left:10px"));
+                                ?>
+								
+								<?= $this->Html->link(
+                                    $btn_view,
+                                    array('controller' => 'Profiles','action'=> 'View', $profile['Profile']['id']),
                                     array('escape' => false, 'style' => "float:right;margin-left:10px"));
                                 ?>
                             </td>

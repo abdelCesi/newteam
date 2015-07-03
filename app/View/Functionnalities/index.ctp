@@ -11,28 +11,28 @@
 						<th><?php echo $this->Paginator->sort('name'); ?></th>
 						<th><?php echo $this->Paginator->sort('function_type'); ?></th>
 						<th><?php echo $this->Paginator->sort('description'); ?></th>
-						<th class="actions"><?php echo __('Actions'); ?></th>
                     </tr>
                     </thead>
                     <tbody>
                     <?php foreach ($functionnalities as $functionnality): ?>
                         <tr>
                             <td>
-                                <?php echo h($functionnality['Functionnality']['id']); ?>&nbsp;
+                                <?= $functionnality['Functionnality']['id']; ?>&nbsp;
                             </td>
 							<td>
-                                <?php echo h($functionnality['Functionnality']['name']); ?>&nbsp;
+                                <?= ($functionnality['Functionnality']['name']) ?>&nbsp;
                             </td>
   							<td>
-                                <?php echo h($functionnality['Functionnality']['function_type']); ?>&nbsp;
+                                <?= $functionnality['Functionnality']['function_type']; ?>&nbsp;
                             </td>
-														<td>
-                                <?php echo h($functionnality['Functionnality']['description']); ?>&nbsp;
-                            </td>
-                            <td>
+							<td>
+                                <?= $functionnality['Functionnality']['description']; ?>&nbsp;
                                 
-
                                 <?php
+								$btn_view = "<button type='button' class='btn btn-default btn-xs' aria-label='Left Align'>
+                                                <span class='glyphicon glyphicon-info-sign' aria-hidden='true'></span>
+                                            </button>";
+											
                                 $btn_edit = "<button type='button' class='btn btn-default btn-xs' aria-label='Left Align'>
                                                 <span class='glyphicon glyphicon-pencil' aria-hidden='true'></span>
                                             </button>";
@@ -44,26 +44,22 @@
 
                                 <?= $this->Html->link(
                                     $btn_delete,
-                                    array(
-										'controller' => 'functionnalities',
-										'action'=> 'delete', 
-										$functionnality['Functionnality']['id']),
-                                    array(
-										'escape' => false, 
-										'style' => "margin-left:10px"),
-                                    "Etes-vous sur de vouloir supprimer : ".$functionnality['Functionnality']['name']
+                                    array('controller' => 'functionnalities', 'action'=> 'delete', $functionnality['Functionnality']['id']),
+                                    array('escape' => false, 'style' => "float:right;margin-left:10px"),
+									"Etes-vous sur de vouloir supprimer : ".$functionnality['Functionnality']['name']
                                 );
                                 ?>
 
                                 <?= $this->Html->link(
                                     $btn_edit,
-                                    array(
-										'controller' => 'functionnalities',
-										'action'=> 'edit',
-										$functionnality['Functionnality']['id']),
-                                    array(
-										'escape' => false, 
-										'style' => "float:left;margin-left:10px"));
+                                    array('controller' => 'functionnalities', 'action'=> 'edit', $functionnality['Functionnality']['id']),
+                                    array('escape' => false, 'style' => "float:right;margin-left:10px"));
+                                ?>
+								
+								<?= $this->Html->link(
+                                    $btn_view,
+                                    array('controller' => 'functionnalities','action'=> 'View', $functionnality['Functionnality']['id']),
+                                    array('escape' => false, 'style' => "float:right;margin-left:10px"));
                                 ?>
                             </td>
                         </tr>

@@ -1,73 +1,110 @@
-<div class="functionnalities view">
-<h2><?php echo __('Functionnality'); ?></h2>
-	<dl>
-		<dt><?php echo __('Id'); ?></dt>
-		<dd>
-			<?php echo h($functionnality['Functionnality']['id']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Name'); ?></dt>
-		<dd>
-			<?php echo h($functionnality['Functionnality']['name']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Function Type'); ?></dt>
-		<dd>
-			<?php echo h($functionnality['Functionnality']['function_type']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Description'); ?></dt>
-		<dd>
-			<?php echo h($functionnality['Functionnality']['description']); ?>
-			&nbsp;
-		</dd>
-	</dl>
-	<table cellpadding = "0" cellspacing = "0">
-		<tr>
-			<td class="actions">
-				<?php echo $this->Html->link(__('Edit Functionnality'), array('action' => 'edit', $functionnality['Functionnality']['id'])); ?> 
-				<?php echo $this->Form->postLink(__('Delete Functionnality'), array('action' => 'delete', $functionnality['Functionnality']['id']), array(), __('Are you sure you want to delete # %s?', $functionnality['Functionnality']['id'])); ?> 
-			</td>
-		</tr>
-	</table>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>		
-		<li><?php echo $this->Html->link(__('List Functionnalities'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Profiles'), array('controller' => 'profiles', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Profilfunctionnalities'), array('controller' => 'profilfunctionnalities', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Functionnalities'), array('controller' => 'functionnalities', 'action' => 'index')); ?> </li>
-	</ul>
-</div>
+<h4>
+	<label for="Identifiant">
+		<b>Identifiant :</b>
+		<?php echo h($functionnality['Functionnality']['id']); ?>
+	</label>
+</h4>
+<h4>
+	<label for="Fonctionnality Name">
+		<b>Nom :</b>
+		<?php echo h($functionnality['Functionnality']['name']); ?>
+	</label>
+</h4>
+<h4>
+	<label for="Fonctionnality Type">
+		<b>Type :</b>
+		<?php echo h($functionnality['Functionnality']['function_type']); ?>
+	</label>
+</h4>
+<h4>
+	<label for="Fonctionnality Description">
+		<b>Description :</b>
+		<?php echo h($functionnality['Functionnality']['description']); ?>
+	</label>
+</h4>
+
+<table cellpadding = "0" cellspacing = "0"><tr><td class="actions"></td></tr></table>
+
+
 <div class="related">
-	<h3><?php echo __('Related Profilfunctionnalities'); ?></h3>
-	<?php if (!empty($functionnality['Profilfunctionnality'])): ?>
+	<h3><?php echo __('Related Profils'); ?></h3>
+		
+		<!--Ajout d'une association profil fonctionnalité-->
+		<?php
+			$affect = "<a href='#affect_modal' class='pull-left btn btn-sm btn-success' data-toggle='modal'>
+							Affecter un nouveau profil
+						</a>";
+		?>
+		<?= $this->Html->link(
+			$affect,
+			array('controller' => 'Functionnalities','action'=> 'affectProfil', $functionnality['Functionnality']['id']),
+			array('escape' => false, 'style' => "float:left;margin-left:10px"));
+		?>
+		<div id="affect_modal" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title">Affecter la fonctionnalit&eacute; &agrave; un profil</h4>
+					</div>
+					<div class="modal-body">
+						<?php
+							echo $this->Form->create('Profilfunctionnality');
+							echo $this->Form->input('functionnality_id', array('default'=>$functionnality['Functionnality']['id']));
+							echo $this->Form->input('profile_id');
+						?>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+						<?php
+						echo $this->Form->button('Enregister', array('class' => 'submit btn btn-primary'));
+						?>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	<!--Liste des associations propre à la fonctionnalité regardé-->
+	<?php if (!empty($functionnality['Profile'])): ?>
 	<table cellpadding = "0" cellspacing = "0">
 	<tr>
 		<th><?php echo __('Id'); ?></th>
-		<th><?php echo __('Profile Id'); ?></th>
-		<th><?php echo __('Functionnalitie Id'); ?></th>
-		<th class="actions"><?php echo __('Actions'); ?></th>
+		<th><?php echo __('Nom'); ?></th>
+		<th><?php echo __('Horaire'); ?></th>
 	</tr>
-	<?php foreach ($functionnality['Profilfunctionnality'] as $profilfunctionnality): ?>
+	<?php foreach ($functionnality['Profile'] as $profile): ?>
 		<tr>
-			<td><?php echo $profilfunctionnality['id']; ?></td>
-			<td><?php echo $profilfunctionnality['profile_id']; ?></td>
-			<td><?php echo $profilfunctionnality['functionnality_id']; ?></td>
-			<td class="actions">
-				<?php echo $this->Html->link(__('View'), array('controller' => 'profilfunctionnalities', 'action' => 'view', $profilfunctionnality['id'])); ?>
-				<?php echo $this->Html->link(__('Edit'), array('controller' => 'profilfunctionnalities', 'action' => 'edit', $profilfunctionnality['id'])); ?>
-				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'profilfunctionnalities', 'action' => 'delete', $profilfunctionnality['id']), array(), __('Are you sure you want to delete # %s?', $profilfunctionnality['id'])); ?>
+			<td><?php echo $profile['id']; ?></td>
+			<td><?php echo $profile['profile_name']; ?></td>
+			<td><?php echo $profile['working_hour_id']; ?>
+
+				<?php
+				
+				$btn_view = "<button type='button' class='btn btn-default btn-xs' aria-label='Left Align'>
+								<span class='glyphicon glyphicon-info-sign' aria-hidden='true'></span>
+							</button>";
+
+				$btn_delete = "<button type='button' class='btn btn-default btn-xs' aria-label='Left Align'>
+								<span class='glyphicon glyphicon-remove' aria-hidden='true'></span>
+							</button>";
+				?>
+												
+				<?= $this->Html->link(
+					$btn_delete,
+					array('controller' => 'Profilfunctionnalities','action'=> 'delete', $profile['id']),
+					array('escape' => false, 'style' => "float:right;margin-left:10px"),
+					"Voulez vous supprimer l'association avec ce profil : ".$profile['profile_name']
+				);
+				?>
+
+				<?= $this->Html->link(
+					$btn_view,
+					array('controller' => 'Profiles','action'=> 'View', $profile['id']),
+					array('escape' => false, 'style' => "float:right;margin-left:10px"));
+				?>
 			</td>
-		</tr>
+			</tr>
 	<?php endforeach; ?>
 	</table>
 <?php endif; ?>
-
-	<div class="actions">
-		<ul>
-			<li><?php echo $this->Html->link(__('New Profilfunctionnality'), array('controller' => 'profilfunctionnalities', 'action' => 'add')); ?> </li>
-		</ul>
-	</div>
 </div>

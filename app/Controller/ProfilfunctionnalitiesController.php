@@ -23,6 +23,10 @@ class ProfilfunctionnalitiesController extends AppController {
 	public function index() {
 		$this->Profilfunctionnality->recursive = 0;
 		$this->set('profilfunctionnalities', $this->Paginator->paginate());
+		$profiles = $this->Profilfunctionnality->Profile->find('list', 
+		array('fields' => array('Profile.id','Profile.profile_name')));
+		$functionnalities = $this->Profilfunctionnality->Functionnalitie->find('list');
+		$this->set(compact('profiles', 'functionnalities'));
 	}
 
 /**
@@ -53,7 +57,8 @@ class ProfilfunctionnalitiesController extends AppController {
 				return $this -> redirect(array('action' => 'index'));
 			}
 		}
-		$profiles = $this->Profilfunctionnality->Profile->find('list');
+		$profiles = $this->Profilfunctionnality->Profile->find('list', 
+		array('fields' => array('Profile.id','Profile.profile_name')));
 		$functionnalities = $this->Profilfunctionnality->Functionnalitie->find('list');
 		$this->set(compact('profiles', 'functionnalities'));
 	}
@@ -78,7 +83,8 @@ class ProfilfunctionnalitiesController extends AppController {
 			$options = array('conditions' => array('Profilfunctionnality.' . $this->Profilfunctionnality->primaryKey => $id));
 			$this->request->data = $this->Profilfunctionnality->find('first', $options);
 		}
-		$profiles = $this->Profilfunctionnality->Profile->find('list');
+		$profiles = $this->Profilfunctionnality->Profile->find('list', 
+		array('fields' => array('Profile.id','Profile.profile_name')));
 		$functionnalities = $this->Profilfunctionnality->Functionnalitie->find('list');
 		$this->set(compact('profiles', 'functionnalities'));
 	}
@@ -90,6 +96,21 @@ class ProfilfunctionnalitiesController extends AppController {
  * @param string $id
  * @return void
  */
+	public function delete($id = null) {
+		$this->Profilfunctionnality->id = $id;
+		if (!$this->Profilfunctionnality->exists()) {
+			throw new NotFoundException(__('Invalid profilfunctionnality'));
+		}
+		//$this->request->allowMethod('post', 'delete');
+		if ($this->Profilfunctionnality->delete()) {
+			$this->Session->setFlash(__('The profilfunctionnality has been deleted.'));
+			return $this -> redirect(array('action' => 'index'));
+		} else {
+			$this->Session->setFlash(__('The profilfunctionnality could not be deleted. Please, try again.'));
+			return $this -> redirect(array('action' => 'index'));
+		}
+	}
+	
 	public function delete($id = null) {
 		$this->Profilfunctionnality->id = $id;
 		if (!$this->Profilfunctionnality->exists()) {

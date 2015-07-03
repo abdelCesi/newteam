@@ -23,8 +23,6 @@ class ProfilesController extends AppController {
 	public function index() {
 		$this->Profile->recursive = 0;
 		$this->set('profiles', $this->Paginator->paginate());
-		$workingHours = $this->Profile->WorkingHour->find('all');
-		$this->set(compact('workingHours'));
 	}
 
 /**
@@ -106,4 +104,46 @@ class ProfilesController extends AppController {
 			return $this -> redirect(array('action' => 'index'));
 		}
 	}
+	
+	public function associateFct($id = null) {
+		if (!$this->Profile->exists($id)) {
+			throw new NotFoundException(__('Invalid profile'));
+		}
+		
+			if ($this->request->is('post')) {
+			$this->Profilfunctionnality->create();
+			if ($this->Profilfunctionnality->save($this->request->data)) {
+				$this->Session->setFlash(__('The Profilfunctionnality has been saved.'));
+				return $this -> redirect(array('action' => 'index'));
+			}
+		}
+	}
+	
+	public function editDyna(){
+		$id = $this->request->params['pass'][0];
+
+        //On définie l' id du profil
+        $this->Profile->id = $id;
+		  if( $this->Profile->exists() ){
+            if( $this->request->is( 'post' ) || $this->request->is( 'put' ) ){
+                if( $this->Profile->save( $this->request->data ) ){
+                    $this->Session->setFlash('Profil modifié.');
+					$this->here;
+                }else{
+                    $this->Session->setFlash('Impossible de modifier le profil. S&rsquo;il vous plaît , essayez de nouveau .');
+                }
+            }else{
+                // lecture des données de l'utilisateur
+                //remplissage de notre formulaire en html automatiquement
+                $this->request->data = $this->Profile->read();
+				
+            }
+
+        }else{
+            //Si il nnous allons indiquer à l'utilisateur qu'il n'y a pas l'utilisateur
+            $this->Session->setFlash('Le profil que vous essayez de modifier n&rsquo;existe pas .');
+            //$this->redirect(array('action' => 'view'));
+        }
+	}
+	
 }
