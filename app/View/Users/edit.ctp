@@ -14,7 +14,7 @@ echo $this->Form->create('User');
     echo $this->Form->input('address');
     echo $this->Form->input('mail');
     echo $this->Form->input('phone_number');
-	echo $this->Form->input('profile_id', array (
+	echo $this->Form->input('profile_name', array (
 		'label' => 'Profil',
 		'type' => 'select',
 		'class'=>'form-control'));
