@@ -43,7 +43,7 @@
 
                                 <?= $this->Html->link(
                                     $btn_delete,
-                                    array('controller' => 'classesarticles','action'=> 'delete', $class['ClassesArticle']['id']),
+                                    array('controller' => 'ClassesArticles','action'=> 'delete', $class['ClassesArticle']['id']),
                                     array('escape' => false, 'style' => "margin-left:10px"),
                                     "Are you sure you wish to delete the Class : ".$class['ClassesArticle']['label']
                                 );
@@ -51,7 +51,7 @@
 
                                 <?= $this->Html->link(
                                     $btn_edit,
-                                    array('controller' => 'classesarticles','action'=> 'edit', $class['ClassesArticle']['id']),
+                                    array('controller' => 'ClassesArticles','action'=> 'edit', $class['ClassesArticle']['id']),
                                     array('escape' => false, 'style' => "float:left;margin-left:10px"));
                                 ?>
                             </td>

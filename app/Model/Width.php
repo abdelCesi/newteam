@@ -49,7 +49,7 @@ class Width extends AppModel {
  *
  * @var array
  */
-	public $hasMany = array(
+	/*public $hasMany = array(
 		'Packing' => array(
 			'className' => 'Packing',
 			'foreignKey' => 'width_id',
@@ -63,6 +63,6 @@ class Width extends AppModel {
 			'finderQuery' => '',
 			'counterQuery' => ''
 		)
-	);
+	);*/
 
 }

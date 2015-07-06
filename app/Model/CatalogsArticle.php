@@ -5,12 +5,12 @@ class CatalogsArticle extends AppModel{
 		'label' => array('rule' => 'notEmpty')
 	);
 
-    public $hasMany = array(
+    /*public $hasMany = array(
         'RefArticle' => array(
             'className' => 'RefArticle',
             'foreignKey' => 'catalog_id'
         )
-    );
+    );*/
 
 }
 

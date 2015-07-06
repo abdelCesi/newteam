@@ -1,17 +1,6 @@
 <?php
 App::uses('AppModel', 'Model');
-/**
- * Container Model
- *
- * @property Place $Place
- * @property Packing $Packing
- * @property ArticlesUnit $ArticlesUnit
- * @property Box $Box
- * @property Moveorder $Moveorder
- * @property Pallet $Pallet
- * @property Receptionorder $Receptionorder
- * @property Shippingorder $Shippingorder
- */
+
 class Container extends AppModel {
 
 /**
@@ -22,62 +11,27 @@ class Container extends AppModel {
 	public $validate = array(
 		'id' => array(
 			'notEmpty' => array(
-				'rule' => array('notEmpty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+				'rule' => array('notEmpty')
 			),
 		),
 		'code' => array(
 			'notEmpty' => array(
-				'rule' => array('notEmpty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+				'rule' => array('notEmpty')
 			),
 		),
 		'status' => array(
 			'notEmpty' => array(
-				'rule' => array('notEmpty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+				'rule' => array('notEmpty')
 			),
 		),
-		/*'place_id' => array(
-			'notEmpty' => array(
-				'rule' => array('notEmpty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),*/
 		'packing_id' => array(
 			'notEmpty' => array(
-				'rule' => array('notEmpty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+				'rule' => array('notEmpty')
 			),
 		),
 		'containerType_id' => array(
 			'notEmpty' => array(
-				'rule' => array('notEmpty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+				'rule' => array('notEmpty')
 			),
 		)
 	);
@@ -90,98 +44,22 @@ class Container extends AppModel {
  * @var array
  */
 	public $belongsTo = array(
-		'Place' => array(
-			'className' => 'Place',
-			'foreignKey' => 'place_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		),
-		'Packing' => array(
-			'className' => 'Packing',
-			'foreignKey' => 'packing_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		),
-		'ContainersType' => array(
-			'className' => 'ContainersType',
-			'foreignKey' => 'containerType_id'
-		)
+		'Place',
+		'Packing',
+		'ContainersType'
 	);
-
-	public $hasOne = array(
-		'Box' => array(
-			'className' => 'Box',
-			'foreignKey' => 'container_id',
-			'dependent' => false
-		),
-		'Pallet' => array(
-			'className' => 'Pallet',
-			'foreignKey' => 'container_id',
-			'dependent' => false
-		)
-		);
 
 /**
  * hasMany associations
  *
  * @var array
  */
-	public $hasMany = array(
-		'ArticlesUnit' => array(
-			'className' => 'ArticlesUnit',
-			'foreignKey' => 'container_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		),
-		/*'Box' => array(
-			'className' => 'Box',
-			'foreignKey' => 'container_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		),*/
-		'Moveorder' => array(
-			'className' => 'Moveorder',
-			'foreignKey' => 'container_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		)/*,
-		'Pallet' => array(
-			'className' => 'Pallet',
-			'foreignKey' => 'container_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		)*/
-	);
+	/*public $hasMany = array(
+		'ArticlesUnit',
+		'Moveorder',
+		'ContainersReceptionorder',
+		'ContainersShippingorder'
+	);*/
 
 
 /**
@@ -190,32 +68,8 @@ class Container extends AppModel {
  * @var array
  */
 	public $hasAndBelongsToMany = array(
-		'Receptionorder' => array(
-			'className' => 'Receptionorder',
-			'joinTable' => 'receptionorders_containers',
-			'foreignKey' => 'container_id',
-			'associationForeignKey' => 'receptionorder_id',
-			'unique' => 'keepExisting',
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'finderQuery' => '',
-		),
-		'Shippingorder' => array(
-			'className' => 'Shippingorder',
-			'joinTable' => 'shippingorders_containers',
-			'foreignKey' => 'container_id',
-			'associationForeignKey' => 'shippingorder_id',
-			'unique' => 'keepExisting',
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'finderQuery' => '',
-		)
+		'Shippingorder',
+		'Receptionorder'
 	);
 
 	/**

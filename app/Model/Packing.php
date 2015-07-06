@@ -94,7 +94,7 @@ class Packing extends AppModel {
  *
  * @var array
  */
-	public $hasMany = array(
+	/*public $hasMany = array(
 		'Container' => array(
 			'className' => 'Container',
 			'foreignKey' => 'packing_id',
@@ -108,6 +108,6 @@ class Packing extends AppModel {
 			'finderQuery' => '',
 			'counterQuery' => ''
 		)
-	);
+	);*/
 
 }

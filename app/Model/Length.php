@@ -49,7 +49,7 @@ class Length extends AppModel {
  *
  * @var array
  */
-	public $hasMany = array(
+	/*public $hasMany = array(
 		'Packing' => array(
 			'className' => 'Packing',
 			'foreignKey' => 'length_id',
@@ -63,6 +63,6 @@ class Length extends AppModel {
 			'finderQuery' => '',
 			'counterQuery' => ''
 		)
-	);
+	);*/
 
 }

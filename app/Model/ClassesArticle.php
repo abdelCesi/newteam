@@ -10,22 +10,21 @@ class ClassesArticle extends AppModel{
 	        'className' => 'ClassesArticle',
 	        'foreignKey' => 'classe_id'
 	    ),
-        'RefArticle' => array(
+        /*'RefArticle' => array(
             'className' => 'RefArticle',
             'foreignKey' => 'classe_id'
         ),
         'Place' => array(
         	'classeName' => 'Place',
         	'foreignKey' => 'classesArticle_id'
-    	)
+    	)*/
     );	
 
 	//public $recursive = -1;
 	public $belongsTo = array(
 	    'Supervisor' => array(
 	        'className' => 'ClassesArticle',
-	        'foreignKey' => 'classe_id',
-	        'order' => 'ClassesArticle.id'
+	        'foreignKey' => 'classe_id'
 	    ),
 	);
 

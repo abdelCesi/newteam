@@ -56,15 +56,15 @@
 
                                 <?= $this->Html->link(
                                     $btn_delete,
-                                    array('controller' => 'refarticles','action'=> 'delete', $ref['RefArticle']['id']),
+                                    array('controller' => 'RefArticles','action'=> 'delete', $ref['RefArticle']['id']),
                                     array('escape' => false, 'style' => "margin-left:10px"),
-                                    "Are you sure you wish to delete the User : ".$ref['RefArticle']['label']
+                                    "Are you sure you wish to delete the Reference : ".$ref['RefArticle']['label']
                                 );
                                 ?>
 
                                 <?= $this->Html->link(
                                     $btn_edit,
-                                    array('controller' => 'refarticles','action'=> 'edit', $ref['RefArticle']['id']),
+                                    array('controller' => 'RefArticles','action'=> 'edit', $ref['RefArticle']['id']),
                                     array('escape' => false, 'style' => "float:left;margin-left:10px"));
                                 ?>
                         </td>

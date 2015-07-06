@@ -31,11 +31,5 @@ class ContainersType extends AppModel {
 		),
 	);
 
-	public $hasMany = array(
-		'Container' => array(
-			'className' => 'Container',
-			'foreignKey' => 'containerType_id',
-			'dependent' => false
-		)
-		);
+	//public $hasMany ='Container';
 }

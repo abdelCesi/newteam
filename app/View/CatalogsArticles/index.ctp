@@ -41,7 +41,7 @@
                                     $btn_delete,
                                     array('controller' => 'CatalogsArticles','action'=> 'delete', $catalog['CatalogsArticle']['id']),
                                     array('escape' => false, 'style' => "margin-left:10px"),
-                                    "Are you sure you wish to delete the User : ".$catalog['CatalogsArticle']['label']
+                                    "Are you sure you wish to delete the Catalog : ".$catalog['CatalogsArticle']['label']
                                 );
                                 ?>
 

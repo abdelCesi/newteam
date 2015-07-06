@@ -18,12 +18,12 @@ class RefArticle extends AppModel{
         )
     );
 
-    public $hasMany = array(
+    /*public $hasMany = array(
         'ArticlesUnit' => array(
             'className' => 'ArticlesUnit',
             'foreignKey' => 'ref_article_id'
         )
-    );  
+    );*/  
 
     public function search($content) {
         $result = $this->find('all',

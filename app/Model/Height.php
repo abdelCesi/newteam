@@ -49,7 +49,7 @@ class Height extends AppModel {
  *
  * @var array
  */
-	public $hasMany = array(
+	/*public $hasMany = array(
 		'Packing' => array(
 			'className' => 'Packing',
 			'foreignKey' => 'height_id',
@@ -63,6 +63,6 @@ class Height extends AppModel {
 			'finderQuery' => '',
 			'counterQuery' => ''
 		)
-	);
+	);*/
 
 }
