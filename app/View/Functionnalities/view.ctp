@@ -91,7 +91,7 @@
 												
 				<?= $this->Html->link(
 					$btn_delete,
-					array('controller' => 'Profilfunctionnalities','action'=> 'deleteDynamic', $functionnality['Profilfunctionnality']['id']),
+					array('controller' => 'Profilfunctionnalities','action'=> 'deleteDynamic', $profile['Profilfunctionnality']['id']),
 					array('escape' => false, 'style' => "float:right;margin-left:10px"),
 					"Voulez vous supprimer l'association avec ce profil : ".$profile['profile_name']
 				);
