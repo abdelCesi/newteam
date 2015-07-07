@@ -101,7 +101,6 @@ class ProfilfunctionnalitiesController extends AppController {
 		if (!$this->Profilfunctionnality->exists()) {
 			throw new NotFoundException(__('Invalid profilfunctionnality'));
 		}
-		//$this->request->allowMethod('post', 'delete');
 		if ($this->Profilfunctionnality->delete()) {
 			$this->Session->setFlash(__('The profilfunctionnality has been deleted.'));
 			return $this -> redirect(array('action' => 'index'));
@@ -111,18 +110,20 @@ class ProfilfunctionnalitiesController extends AppController {
 		}
 	}
 	
-	public function delete($id = null) {
-		$this->Profilfunctionnality->id = $id;
+	public function deleteDynamic($id){//profile = null, $idfunctionnality = null, $url = null) {
+		//$options = array('conditions' => array('Profilfunctionnality.profile_id' => $idprofile, 'Profilfunctionnality.functionnality_id' => $idfunctionnality));
+		//$id = $this->Profilfunctionnality->find('first', $options);
+		$this->Profilfunctionnality->set($id);
 		if (!$this->Profilfunctionnality->exists()) {
 			throw new NotFoundException(__('Invalid profilfunctionnality'));
 		}
-		//$this->request->allowMethod('post', 'delete');
 		if ($this->Profilfunctionnality->delete()) {
 			$this->Session->setFlash(__('The profilfunctionnality has been deleted.'));
-			return $this -> redirect(array('action' => 'index'));
+			return $this -> redirect(array('url'=>$url));
+			//return $this -> redirect(array('controler' =>'profile', 'action' => 'index'));
 		} else {
 			$this->Session->setFlash(__('The profilfunctionnality could not be deleted. Please, try again.'));
-			return $this -> redirect(array('action' => 'index'));
+			return $this -> redirect(array('url'=>$url));
 		}
 	}
 }

@@ -38,6 +38,10 @@ class ProfilesController extends AppController {
 		}
 		$options = array('conditions' => array('Profile.' . $this->Profile->primaryKey => $id));
 		$this->set('profile', $this->Profile->find('first', $options));
+		$functionnality = $this->set('functionnalities', $this->Profile->Functionnality->find('list'));
+		$profile =  $this->set('profiles', $this->Profile->find('list'));
+		$this->set(compact('profiles', 'functionnalities'));
+		$this->affectFct();
 	}
 
 /**
@@ -105,45 +109,34 @@ class ProfilesController extends AppController {
 		}
 	}
 	
-	public function associateFct($id = null) {
-		if (!$this->Profile->exists($id)) {
-			throw new NotFoundException(__('Invalid profile'));
-		}
+	public function affectFct($id = null){
 		
-			if ($this->request->is('post')) {
-			$this->Profilfunctionnality->create();
-			if ($this->Profilfunctionnality->save($this->request->data)) {
-				$this->Session->setFlash(__('The Profilfunctionnality has been saved.'));
-				return $this -> redirect(array('action' => 'index'));
-			}
-		}
-	}
-	
-	public function editDyna(){
+		//On obtient l'ID de la fonctionnalité à associer
 		$id = $this->request->params['pass'][0];
 
-        //On définie l' id du profil
-        $this->Profile->id = $id;
-		  if( $this->Profile->exists() ){
-            if( $this->request->is( 'post' ) || $this->request->is( 'put' ) ){
-                if( $this->Profile->save( $this->request->data ) ){
-                    $this->Session->setFlash('Profil modifié.');
-					$this->here;
-                }else{
-                    $this->Session->setFlash('Impossible de modifier le profil. S&rsquo;il vous plaît , essayez de nouveau .');
-                }
-            }else{
-                // lecture des données de l'utilisateur
-                //remplissage de notre formulaire en html automatiquement
-                $this->request->data = $this->Profile->read();
-				
-            }
+		//On définie l' id de la fonctionnalité 
+		$this->Profile->id = $id;
 
-        }else{
-            //Si il nnous allons indiquer à l'utilisateur qu'il n'y a pas l'utilisateur
-            $this->Session->setFlash('Le profil que vous essayez de modifier n&rsquo;existe pas .');
-            //$this->redirect(array('action' => 'view'));
-        }
-	}
-	
+		//On vérifie si une fonctionnalité existe avec cet id
+		if( $this->Profile->exists() ){
+			if( $this->request->is( 'post' ) || $this->request->is( 'put' ) ){
+				if( $this->Profile->Profilfunctionnality->save( $this->request->data ) ){
+					$this->Session->setFlash('Fonctionnalit&eacute; affect&eacute;.');
+					return $this->redirect($this->here);
+				}else{
+					$this->Session->setFlash('Impossible d&rsquo;affecter la fonctionnalit&eacute;. S&rsquo;il vous plaît , essayez de nouveau .');
+				}
+			}else{
+				// lecture des données de l'utilisateur
+				//remplissage de notre formulaire en html automatiquement
+				$this->request->data = $this->Profile->read();
+				
+			}
+
+		}else{
+			//Si il nnous allons indiquer à l'utilisateur qu'il n'y a pas l'utilisateur
+			$this->Session->setFlash('La fonctionnalit&eacute; du profil que vous essayez de modifier n&rsquo;existe pas .');
+			//$this->redirect(array('action' => 'view'));
+		}
+	}	
 }

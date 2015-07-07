@@ -23,6 +23,42 @@
 
 <div class="related">
 	<h3><?php echo __('Fonctionnalit&eacute;s ratach&eacute;es &agrave; ce profil'); ?></h3>
+	
+		<!--Ajout d'une association profil fonctionnalité-->
+		<?php
+			$affect = "<a href='#affect_modal' class='pull-left btn btn-sm btn-success' data-toggle='modal'>
+							Affecter une nouvelle fonctionnalit&eacute;
+						</a>";
+		?>
+		<?= $this->Html->link(
+			$affect,
+			array('controller' => 'Profile', 'action'=> 'affectFct', $profile['Profile']['id']),
+			array('escape' => false, 'style' => "float:left;margin-left:10px"));
+		?>
+		<div id="affect_modal" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title">Affecter la fonctionnalit&eacute; &agrave; un profil</h4>
+					</div>
+					<div class="modal-body">
+						<?php
+							echo $this->Form->create('Profilfunctionnality');
+							echo $this->Form->input('profile_id', array('default'=>$profile['Profile']['id'], 'type'=>'hidden', 'disabled' => 'disabled'));
+							echo $this->Form->input('functionnality_id');							
+						?>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+						<?php
+						echo $this->Form->button('Enregister', array('class' => 'submit btn btn-primary'));
+						?>
+					</div>
+				</div>
+			</div>
+		</div>
+	
 	<?php if (!empty($profile['Functionnality'])): ?>
 	<table cellpadding = "0" cellspacing = "0">
 	<tr>
@@ -77,9 +113,4 @@
 	</table>
 <?php endif; ?>
 
-	<div class="actions">
-		<ul>
-			<li><?php echo $this->Html->link(__('New Profilfunctionnality'), array('controller' => 'profilfunctionnalities', 'action' => 'add')); ?> </li>
-		</ul>
-	</div>
 </div>

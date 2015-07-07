@@ -50,7 +50,7 @@
 					<div class="modal-body">
 						<?php
 							echo $this->Form->create('Profilfunctionnality');
-							echo $this->Form->input('functionnality_id', array('default'=>$functionnality['Functionnality']['id']));
+							echo $this->Form->input('functionnality_id', array('default'=>$functionnality['Functionnality']['id'], 'type' => 'hidden'));
 							echo $this->Form->input('profile_id');
 						?>
 					</div>
@@ -91,12 +91,12 @@
 												
 				<?= $this->Html->link(
 					$btn_delete,
-					array('controller' => 'Profilfunctionnalities','action'=> 'delete', $profile['id']),
+					array('controller' => 'Profilfunctionnalities','action'=> 'deleteDynamic', $functionnality['Profilfunctionnality']['id']),
 					array('escape' => false, 'style' => "float:right;margin-left:10px"),
 					"Voulez vous supprimer l'association avec ce profil : ".$profile['profile_name']
 				);
 				?>
-
+				
 				<?= $this->Html->link(
 					$btn_view,
 					array('controller' => 'Profiles','action'=> 'View', $profile['id']),

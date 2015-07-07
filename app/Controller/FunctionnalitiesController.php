@@ -38,12 +38,11 @@ class FunctionnalitiesController extends AppController {
 		}
 		$options = array('conditions' => array('Functionnality.' . $this->Functionnality->primaryKey => $id));
 		$this->set('functionnality', $this->Functionnality->find('first', $options));
-		$workingHours = $this->Functionnality->Profile->WorkingHour->find('list', array(
-		'fields' => array('WorkingHour.id','WorkingHour.team_code','WorkingHour.start_time','WorkingHour.end_time')));
+		$workingHours = $this->Functionnality->Profile->WorkingHour->find('list', array('fields' => array('WorkingHour.id','WorkingHour.team_code','WorkingHour.start_time','WorkingHour.end_time')));
 		$functionnality = $this->set('functionnalities', $this->Functionnality->find('list'));
+		$profilfunctionnality =  $this->set('profilfunctionnalities', $this->Functionnality->Profilfunctionnality->find('list'));
 		$profile =  $this->set('profiles', $this->Functionnality->Profile->find('list'));
-		//$this->set(compact('dependencies', 'workingHours'));
-		$this->set(compact('profiles', 'functionnalities'));
+		$this->set(compact('profiles', 'functionnalities','profilfunctionnalities'));
 		$this->affectProfil();
 	}
 
@@ -124,19 +123,14 @@ class FunctionnalitiesController extends AppController {
 					$this->Session->setFlash('Impossible d&rsquo;affecter le profil. S&rsquo;il vous plaît , essayez de nouveau .');
 				}
 			}else{
-				// lecture des données de l'utilisateur
 				//remplissage de notre formulaire en html automatiquement
-				$this->request->data = $this->Functionnality->read();
-				
+				$this->request->data = $this->Functionnality->read();				
 			}
 
 		}else{
-			//Si il nnous allons indiquer à l'utilisateur qu'il n'y a pas l'utilisateur
 			$this->Session->setFlash('Le profil de la fonctionnalit&eacute; que vous essayez de modifier n&rsquo;existe pas .');
-			//$this->redirect(array('action' => 'view'));
 		}
 	}
-
 }
 
 
