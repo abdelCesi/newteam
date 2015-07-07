@@ -33,6 +33,12 @@ class Container extends AppModel {
 			'notEmpty' => array(
 				'rule' => array('notEmpty')
 			),
+		),
+		'place_id' => array(
+			'notEmpty' => array(
+				'rule' => array('notEmpty'),
+				'required' => false
+			),
 		)
 	);
 
@@ -67,10 +73,10 @@ class Container extends AppModel {
  *
  * @var array
  */
-	public $hasAndBelongsToMany = array(
+	/*public $hasAndBelongsToMany = array(
 		'Shippingorder',
 		'Receptionorder'
-	);
+	);*/
 
 	/**
 	 * move container method

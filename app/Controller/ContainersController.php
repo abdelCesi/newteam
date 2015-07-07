@@ -68,8 +68,8 @@ class ContainersController extends AppController {
 		$places = $this->Container->Place->find('list');
 		$packings = $this->Container->Packing->find('list', array('fields' => array('Packing.id', 'Packing.label')));
 		$containerstypes = $this->Container->ContainersType->find('list', array('fields' => array('ContainersType.id', 'ContainersType.label')));
-		$receptionorders = $this->Container->Receptionorder->find('list');
-		$shippingorders = $this->Container->Shippingorder->find('list');
+		//$receptionorders = $this->Container->Receptionorder->find('list');
+		//$shippingorders = $this->Container->Shippingorder->find('list');
 		$this->set(compact('places', 'packings', 'containerstypes', 'receptionorders', 'shippingorders'));
 	}
 
@@ -98,8 +98,8 @@ class ContainersController extends AppController {
 		$places = $this->Container->Place->find('list');
 		$packings = $this->Container->Packing->find('list',  array('fields' => array('Packing.id', 'Packing.label')));
 		$containerstypes = $this->Container->ContainersType->find('list', array('fields' => array('ContainersType.id', 'ContainersType.label')));
-		$receptionorders = $this->Container->Receptionorder->find('list');
-		$shippingorders = $this->Container->Shippingorder->find('list');
+		//$receptionorders = $this->Container->Receptionorder->find('list');
+		//$shippingorders = $this->Container->Shippingorder->find('list');
 		$this->set(compact('places', 'packings', 'containerstypes', 'receptionorders', 'shippingorders'));
 	}
 

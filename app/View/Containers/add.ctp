@@ -35,8 +35,8 @@ echo $this->Form->create('Container');
 					      'options' => $packings,
 					      'empty' => '(choisissez)'
 						));
-		echo $this->Form->input('Receptionorder');
-		echo $this->Form->input('Shippingorder');
+		//echo $this->Form->input('Receptionorder');
+		//echo $this->Form->input('Shippingorder');
 		
 	echo $this->Form->submit('Créer', 
         array('after' => $this->Html->link('Annuler', array('action' => 'index'), array('class' => 'btn btn-default', 'style' => 'margin-left:10px'), "Etes-vous sûr de quitter cette page ?"))

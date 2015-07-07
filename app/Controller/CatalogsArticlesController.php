@@ -55,9 +55,9 @@ class CatalogsArticlesController extends AppController{
     }
 
     public function delete($id) {
-        if ($this->request->is('get')) {
+        /*if ($this->request->is('get')) {
             throw new MethodNotAllowedException();
-        }
+        }*/
 
         if ($this->CatalogsArticle->delete($id)) {
             $this->Session->setFlash(
