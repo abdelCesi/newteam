@@ -1,16 +1,4 @@
 
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-        </div>
-		
 <div class="panel panel-default">
     <div class="panel-body">
         <div class="container">
@@ -34,10 +22,10 @@
                     <thead>
                     <tr>
 						<th><?php echo $this->Paginator->sort('id'); ?></th>
-                        <th><?php echo $this->Paginator->sort('label'); ?></th>
-						<th><?php echo $this->Paginator->sort('length_id'); ?></th>
-						<th><?php echo $this->Paginator->sort('width_id'); ?></th>
-						<th><?php echo $this->Paginator->sort('height_id'); ?></th>
+                        <th><?php echo $this->Paginator->sort('label', 'Libellé'); ?></th>
+						<th><?php echo $this->Paginator->sort('length_id', 'Longueur'); ?></th>
+						<th><?php echo $this->Paginator->sort('width_id', 'Largeur'); ?></th>
+						<th><?php echo $this->Paginator->sort('height_id', 'Hauteur'); ?></th>
 						<th class="actions">Actions</th>
                     </tr>
                     </thead>

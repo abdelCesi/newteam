@@ -41,7 +41,7 @@ class FunctionnalitiesController extends AppController {
 		$workingHours = $this->Functionnality->Profile->WorkingHour->find('list', array('fields' => array('WorkingHour.id','WorkingHour.team_code','WorkingHour.start_time','WorkingHour.end_time')));
 		$functionnality = $this->set('functionnalities', $this->Functionnality->find('list'));
 		$profilfunctionnality =  $this->set('profilfunctionnalities', $this->Functionnality->Profilfunctionnality->find('list'));
-		$profile =  $this->set('profiles', $this->Functionnality->Profile->find('list'));
+		$profile =  $this->set('profiles', $this->Functionnality->Profile->find('list'), array('fields' => array('Profile.id', 'Profile.profile_name')));
 		$this->set(compact('profiles', 'functionnalities','profilfunctionnalities'));
 		$this->affectProfil();
 	}
@@ -118,7 +118,7 @@ class FunctionnalitiesController extends AppController {
 			if( $this->request->is( 'post' ) || $this->request->is( 'put' ) ){
 				if( $this->Functionnality->Profilfunctionnality->save( $this->request->data ) ){
 					$this->Session->setFlash('Profil affect&eacute;.');
-					return $this->redirect($this->here);
+					$this->here;
 				}else{
 					$this->Session->setFlash('Impossible d&rsquo;affecter le profil. S&rsquo;il vous plaît , essayez de nouveau .');
 				}

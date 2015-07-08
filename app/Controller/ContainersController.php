@@ -65,7 +65,7 @@ class ContainersController extends AppController {
 				$this->Session->setFlash(__('The container could not be saved. Please, try again.'));
 			}
 		}
-		$places = $this->Container->Place->find('list');
+		$places = $this->Container->Place->find('list', array('conditions' => array('Place.free' => 1)));
 		$packings = $this->Container->Packing->find('list', array('fields' => array('Packing.id', 'Packing.label')));
 		$containerstypes = $this->Container->ContainersType->find('list', array('fields' => array('ContainersType.id', 'ContainersType.label')));
 		//$receptionorders = $this->Container->Receptionorder->find('list');
@@ -95,7 +95,7 @@ class ContainersController extends AppController {
 			$options = array('conditions' => array('Container.' . $this->Container->primaryKey => $id));
 			$this->request->data = $this->Container->find('first', $options);
 		}
-		$places = $this->Container->Place->find('list');
+		$places = $this->Container->Place->find('list', array('conditions' => array('Place.free' => 1)));
 		$packings = $this->Container->Packing->find('list',  array('fields' => array('Packing.id', 'Packing.label')));
 		$containerstypes = $this->Container->ContainersType->find('list', array('fields' => array('ContainersType.id', 'ContainersType.label')));
 		//$receptionorders = $this->Container->Receptionorder->find('list');

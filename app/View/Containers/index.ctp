@@ -1,6 +1,5 @@
-<nav class="navbar navbar-default">
+<!--<nav class="navbar navbar-default">
     <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
@@ -9,49 +8,56 @@
                 <span class="icon-bar"></span>
             </button>
         </div>
-</nav>
+</nav>-->
 
 <div class="panel panel-default">
     <div class="panel-body">
         <div class="container">
 			
+            <div class="page-header">
+                <h1>Conteneur</h1>
+            </div>
+
             <div class="row">
               <div class="col-md-8">
-                <h1>Conteneur</h1>
+                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                  <div class="btn-group" role="group">
+                    <?php echo $this->Html->link(__('Nouveau Conteneur'), array('action' => 'add'), array( 'class' => 'btn btn-sm btn-default')); ?>
+                  </div>
+                  <div class="btn-group" role="group">
+                    <?php echo $this->Html->link(__('Gérer les conditionnements'), array('controller' => 'packings', 'action' => 'index'), array( 'class' => 'btn btn-sm btn-default')); ?> 
+                  </div>
+                  <div class="btn-group" role="group">
+                    <?php echo $this->Html->link(__('Gérer les unités articles'), array('controller' => 'articles_units', 'action' => 'index'), array( 'class' => 'btn btn-sm btn-default')); ?>
+                  </div>
+                  <div class="btn-group" role="group">
+                    <?php echo $this->Html->link(__('Gérer les types de contenants'), array('controller' => 'ContainersTypes', 'action' => 'index'), array( 'class' => 'btn btn-sm btn-default')); ?>
+                  </div>
+                </div>
               </div>
               <div class="col-md-4">
                 <?php echo $this->Form->create('Container'); ?>
-                <?php echo $this->Form->input('search', array('label' => false,'placeholder' => 'Recherche ...')); ?>
+                <?php echo $this->Form->input('search', array(
+                                                            'label' => false,
+                                                            'placeholder' => 'Recherche ...',
+                                                            'class' => 'form-control'
+                                                            )); ?>
                 <?php echo $this->Form->End(); ?>
               </div>
             </div>
 
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
 
-    				<li><?php echo $this->Html->link(__('Nouveau Conteneur'), array('action' => 'add')); ?></li>
 
-    				<li><?php echo $this->Html->link(__('Gérer les conditionnements'), array('controller' => 'packings', 'action' => 'index')); ?> </li>
-
-    				<li><?php echo $this->Html->link(__('Gérer les unités articles'), array('controller' => 'articles_units', 'action' => 'index')); ?> </li>
-
-                    <li><?php echo $this->Html->link(__('Gérer les types de contenants'), array('controller' => 'ContainersTypes', 'action' => 'index')); ?> </li>
-
-    				<!--<li><?php echo $this->Html->link(__('Gérer les cartons'), array('controller' => 'boxes', 'action' => 'index')); ?> </li>
-
-    				<li><?php echo $this->Html->link(__('Gérer les palettes'), array('controller' => 'pallets', 'action' => 'index')); ?> </li>-->
-    			</ul>
-            </div>
             <div class="table-responsive">
                 <table class="table table-hover table-bordered">
                     <thead>
                     <tr>
 						<th><?php echo $this->Paginator->sort('id'); ?></th>
 						<th><?php echo $this->Paginator->sort('code'); ?></th>
-						<th><?php echo $this->Paginator->sort('status'); ?></th>
-                        <th><?php echo $this->Paginator->sort('containerType_id'); ?></th>
-						<th><?php echo $this->Paginator->sort('place_id'); ?></th>
-						<th><?php echo $this->Paginator->sort('packing_id'); ?></th>
+						<th><?php echo $this->Paginator->sort('status', 'Etat'); ?></th>
+                        <th><?php echo $this->Paginator->sort('containerType_id', 'Type de conteneur'); ?></th>
+						<th><?php echo $this->Paginator->sort('place_id', 'Emplacement'); ?></th>
+						<th><?php echo $this->Paginator->sort('packing_id', 'Conditionement'); ?></th>
 						<th class="actions"><?php echo __('Actions'); ?></th>
                     </tr>
                     </thead>

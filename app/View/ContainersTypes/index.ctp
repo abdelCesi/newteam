@@ -22,7 +22,7 @@
 				<thead>
 				<tr>
 						<th><?php echo $this->Paginator->sort('id'); ?></th>
-						<th><?php echo $this->Paginator->sort('label'); ?></th>
+						<th><?php echo $this->Paginator->sort('label', 'Libellé'); ?></th>
 						<th class="actions"><?php echo __('Actions'); ?></th>
 				</tr>
 				</thead>

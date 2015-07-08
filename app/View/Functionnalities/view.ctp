@@ -51,7 +51,10 @@
 						<?php
 							echo $this->Form->create('Profilfunctionnality');
 							echo $this->Form->input('functionnality_id', array('default'=>$functionnality['Functionnality']['id'], 'type' => 'hidden'));
-							echo $this->Form->input('profile_id');
+							echo $this->Form->input('profile_id', array(
+															      'options' => $profiles,
+															      'empty' => '(choisissez)'
+																));
 						?>
 					</div>
 					<div class="modal-footer">
