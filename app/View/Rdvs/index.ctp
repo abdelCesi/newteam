@@ -7,9 +7,8 @@
                     <thead>
                     <tr>
                         <th><?php echo $this->Paginator->sort('id'); ?></th>
-                        <th>Heure de début</th>
-                        <th>Heure de fin</th>
-                        <th>Date du rdv</th>
+                        <th>Date de début</th>
+                        <th>Date de fin</th>
                         <th>Créé par:</th>
                         <th>Actions</th>
                     </tr>
@@ -25,10 +24,7 @@
                             </td>
                             <td>
                                 <?php echo h($Rdv['Rdv']['end_time']); ?>&nbsp;
-                            </td> 
-							<td>
-                                <?php echo ($Rdv['Date']['date_rdv']); ?>&nbsp;
-                            </td>							
+                            </td> 						
 							<td>
                                 <?php echo ($Rdv['User']['name']	); ?>&nbsp;
                             </td>
