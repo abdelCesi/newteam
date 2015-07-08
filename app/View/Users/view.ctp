@@ -95,7 +95,7 @@
     array('controller' => 'Users','action'=> 'affectSrv', $user['Service']['id']),
     array('escape' => false, 'style' => "float:left;margin-left:10px"));
 ?>
-<!-- Modal initialise password -->
+<!-- Modal service affectation -->
 <div id="affect_modal" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -120,12 +120,51 @@
 </div>
 
 <?php
-	$init_pwd = "<a href='#checkRDVdate' class='pull-left btn btn-sm btn-success' data-toggle='modal'>
+	$checkRDV = "<a href='#checkRDV' class='pull-left btn btn-sm btn-success' data-toggle='modal'>
 					Consulter mes rdvs
 				</a>";
 ?>
 <?= $this->Html->link(
-    $init_pwd,
-    array('controller' => 'Users','action'=> 'checkRDVdate', $user['User']['id']),
+    $checkRDV,
+    array('controller' => 'Users','action'=> 'checkRDVdate',),
     array('escape' => false, 'style' => "float:left;margin-left:10px"));
 ?>
+
+<!-- Modal service affectation -->
+<div id="checkRDV" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Consulter mes rdvs</h4>
+            </div>
+            <div class="modal-body">
+<table class="table table-hover table-bordered">
+                    <thead>
+                    <tr>
+                        <th>RDV</th>
+                        <th>Début</th>
+                        <th>Fin</th>
+              
+                    </tr>
+                    </thead>
+                    <tbody>
+                    
+                        <tr>
+                            <td>
+							
+                                <?=  $this->Form->input('rdv_id'); ?>
+
+                            </td>
+   
+    	
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+        
+            </div>
+        </div>
+    </div>

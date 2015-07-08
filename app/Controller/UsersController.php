@@ -39,7 +39,7 @@ class UsersController extends AppController {
 
             }
         }
-			$profiles=$this->User->Profile->find('list');
+			$profiles=$this->User->Profile->find('all');
 			$services=$this->User->Service->find('list');
 			$this->set(compact('profiles', 'services'));
     }
@@ -49,9 +49,10 @@ class UsersController extends AppController {
             throw new NotFoundException(__('Invalid User'));
         }
 		
-        $options = array('conditions' => array('user.' . $this->User->primaryKey => $id));
+        $options = array('conditions' => array('User.' . $this->User->primaryKey => $id));
         $this->set('user', $this->User->find('first', $options));
 		$services=  $this->set('services', $this->User->Service->find('list'));
+		$rdv=  $this->set('rdvs', $this->User->Rdv->find('list'));
 		/*$this->set(compact('services'));*/
         $this->initMDP();
         $this->affectSrv();
@@ -205,7 +206,23 @@ class UsersController extends AppController {
 	
 	public function checkRDVdate(){
 	
-		$this->set('users', $this->User->find('all'));
+        //On obtient l'ID de l'utilisateur à éditer
+        $id = $this->request->params['pass'][0];
+
+        //On définie l' id de l'utilisateur
+        $this->User->id = $id;
+
+        //On vérifie si un utilisateur existe avec cet id
+        if( $this->User->exists() ){
+           $allRdv = $this->User->Rdv->find('list',array(
+        'fields' => array('Rdv.start_time', 'Rdv.end_time')));
+
+
+        }else{
+            //Si il nnous allons indiquer à l'utilisateur qu'il n'y a pas l'utilisateur
+            $this->Session->setFlash('Pas de rdv associé.');
+            //$this->redirect(array('action' => 'view'));
+        }
 	}
 }
 
