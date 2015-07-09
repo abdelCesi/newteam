@@ -1,17 +1,20 @@
-<div class="heights form">
-<?php echo $this->Form->create('Height'); ?>
-	<fieldset>
-		<legend><?php echo __('Add Height'); ?></legend>
-	<?php
-		echo $this->Form->input('height');
-	?>
-	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
-</div>
-<div class="actions">
-	<h3><?php echo __('Menu'); ?></h3>
-	<ul>
-		<li>Height</li>
-		<li><?php echo $this->Html->link(__('Back'), array('action' => 'index')); ?></li> </br>
-	</ul>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="container">
+
+            <div class="page-header">
+                <h2>Ajouter une hauteur</h2>
+            </div>
+
+<?php
+    echo $this->Form->create('Height');
+    echo $this->Form->input('height', array('label' => 'Hauteur ', 'class' => 'form-control'));
+    echo $this->Form->submit('Ajouter',
+	        array('after' => $this->Html->link('Annuler', array('action' => 'index'), array('class' => 'btn btn-default', 'style' => 'margin-left:10px'), "Etes-vous sûr de quitter cette page ?"))
+	    );
+	echo $this->Form->end();
+?>
+
+        </div>
+    </div>
 </div>

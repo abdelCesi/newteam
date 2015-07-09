@@ -13,7 +13,7 @@
 <div class="panel panel-default">
     <div class="panel-body">
         <div class="container">
-			
+
             <div class="page-header">
                 <h1>Conteneur</h1>
             </div>
@@ -21,6 +21,7 @@
             <div class="row">
               <div class="col-md-8">
                 <div class="btn-group btn-group-justified" role="group" aria-label="...">
+
                   <div class="btn-group" role="group">
                     <?php echo $this->Html->link(__('Nouveau Conteneur'), array('action' => 'add'), array( 'class' => 'btn btn-sm btn-default')); ?>
                   </div>
@@ -33,8 +34,10 @@
                   <div class="btn-group" role="group">
                     <?php echo $this->Html->link(__('Gérer les types de contenants'), array('controller' => 'ContainersTypes', 'action' => 'index'), array( 'class' => 'btn btn-sm btn-default')); ?>
                   </div>
+
                 </div>
               </div>
+
               <div class="col-md-4">
                 <?php echo $this->Form->create('Container'); ?>
                 <?php echo $this->Form->input('search', array(

@@ -1,6 +1,10 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="container">
 
-
-<h2>Création d'un conditionnement</h2>
+            <div class="page-header">
+                <h2>Création d'un conditionnement</h2>
+            </div>
 
 <?php
 //formulaire d'ajout , nommage des noms de colonnes pareil que ceux en base
@@ -29,3 +33,7 @@ echo $this->Form->create('Packing');
     echo $this->Form->end();
 
 ?>
+
+        </div>
+    </div>
+</div>

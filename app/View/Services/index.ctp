@@ -3,13 +3,27 @@
 <div class="panel panel-default">
     <div class="panel-body">
         <div class="container">
-            <h1>Services</h1>
+
+            <div class="page-header">
+                <h1>Services</h1>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="btn-group" role="group">
+                        <?= $this->Html->link("Ajouter un service", array('controller' => 'services','action'=> 'add'), array( 'class' => 'btn btn-sm btn-primary')); ?>
+                    </div>
+               </div>
+            </div>
+
+            <p>
+
             <div class="table-responsive">
                 <table class="table table-hover table-bordered">
                     <thead>
                     <tr>
 						<th><?php echo $this->Paginator->sort('id'); ?></th>
-						<th><?php echo $this->Paginator->sort('service_name'); ?></th>
+						<th><?php echo $this->Paginator->sort('service_name', 'Nom du service'); ?></th>
 						<th class="actions"><?php echo __('Actions'); ?></th>
                     </tr>
                     </thead>
@@ -65,7 +79,6 @@
                     </tbody>
                 </table>
             </div>
-               <?= $this->Html->link("Ajouter un service", array('controller' => 'services','action'=> 'add'), array( 'class' => 'btn btn-sm btn-primary')); ?>
         </div>
     </div>
 </div>

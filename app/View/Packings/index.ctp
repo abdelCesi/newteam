@@ -2,21 +2,38 @@
 <div class="panel panel-default">
     <div class="panel-body">
         <div class="container">
-            <h1>Conditionnements</h1>
-			
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-				<li><?php echo $this->Html->link(__('Ajouter un conditionnement'), array('action' => 'add')); ?></li>
 
-				<li><?php echo $this->Html->link(__('Gérer longueur'), array('controller' => 'lengths', 'action' => 'index')); ?> </li>
+            <div class="page-header">
+                <h1>Conditionnements</h1>
+			</div>
 
-				<li><?php echo $this->Html->link(__('Gérer largeur'), array('controller' => 'widths', 'action' => 'index')); ?> </li>
+			<div class="row">
+                <div class="col-md-8">
+                    <div class="btn-group btn-group-justified" role="group" aria-label="...">
 
-				<li><?php echo $this->Html->link(__('Gérer hauteur'), array('controller' => 'heights', 'action' => 'index')); ?> </li>
+                    <div class="btn-group" role="group">
+                        <a class="btn btn-sm btn-default" <?php echo $this->Html->link(__('Ajouter conditionnement'), array('action' => 'add')); ?></a>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <a class="btn btn-sm btn-default" <?php echo $this->Html->link(__('Gérer longueur'), array('controller' => 'lengths', 'action' => 'index')); ?></a>
+                    </div>
 
-				<li><?php echo $this->Html->link(__('Gérer les conteneurs'), array('controller' => 'containers', 'action' => 'index')); ?> </li>
-			</ul>
- </div>
+                    <div class="btn-group" role="group">
+                        <a class="btn btn-sm btn-default" <?php echo $this->Html->link(__('Gérer largeur'), array('controller' => 'widths', 'action' => 'index')); ?></a>
+                    </div>
+
+                    <div class="btn-group" role="group">
+                        <a class="btn btn-sm btn-default" <?php echo $this->Html->link(__('Gérer hauteur'), array('controller' => 'heights', 'action' => 'index')); ?></a>
+                    </div>
+
+                    <div class="btn-group" role="group">
+                         <a class="btn btn-sm btn-default" <?php echo $this->Html->link(__('Gérer les conteneurs'), array('controller' => 'containers', 'action' => 'index')); ?></a>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+            <p>
             <div class="table-responsive">
                 <table class="table table-hover table-bordered">
                     <thead>
@@ -73,6 +90,19 @@
                     <?php endforeach ?>
                     </tbody>
                 </table>
+                <p>
+                   <?php
+                      echo $this->Paginator->counter(array(
+                      'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
+                       ));
+                       ?>  </p>
+                       <div class="paging">
+                       <?php
+                          echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));
+                          echo $this->Paginator->numbers(array('separator' => ''));
+                          echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
+                   ?>
+                </div>
             </div>
         </div>
     </div>

@@ -1,23 +1,37 @@
 <div class="panel panel-default">
     <div class="panel-body">
 		<div class="container">
-            <h1>Types de contenants</h1>
-			
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	            <ul class="nav navbar-nav">
 
-	            	<li><?php echo $this->Html->link(__('Nouveau type de contenants'), array('action' => 'add')); ?></li>
-
-					<li><?php echo $this->Html->link(__('Gérer les contenants'), array('controller' => 'Containers', 'action' => 'index')); ?> </li>
-
-					<li><?php echo $this->Html->link(__('Gérer les conditionnements'), array('controller' => 'packings', 'action' => 'index')); ?> </li>
-
-					<li><?php echo $this->Html->link(__('Gérer les unités articles'), array('controller' => 'articles_units', 'action' => 'index')); ?> </li>
-
-				</ul>
+		    <div class="page-header">
+                <h1>Types de contenants</h1>
             </div>
-            <div class="table-responsive">
+			
+			<div class="row">
+                <div class="col-md-8">
+                     <div class="btn-group btn-group-justified" role="group" aria-label="...">
 
+                    <div class="btn-group" role="group">
+	            	    <a class="btn btn-sm btn-default" <?php echo $this->Html->link(__('Nouveau type de contenants'), array('action' => 'add')); ?></a>
+	            	</div>
+
+					<div class="btn-group" role="group">
+					    <a class="btn btn-sm btn-default" <?php echo $this->Html->link(__('Gérer les contenants'), array('controller' => 'Containers', 'action' => 'index')); ?></a>
+					</div>
+
+					<div class="btn-group" role="group">
+					    <a class="btn btn-sm btn-default" <?php echo $this->Html->link(__('Gérer les conditionnements'), array('controller' => 'packings', 'action' => 'index')); ?></a>
+					</div>
+
+					<div class="btn-group" role="group">
+					    <a class="btn btn-sm btn-default" <?php echo $this->Html->link(__('Gérer les unités articles'), array('controller' => 'articles_units', 'action' => 'index')); ?></a>
+					</div>
+
+				</div>
+              </div>
+            </div>
+            <p>
+
+            <div class="table-responsive">
 				<table  class="table table-hover table-bordered">
 				<thead>
 				<tr>

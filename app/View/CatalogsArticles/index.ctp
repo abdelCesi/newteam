@@ -4,9 +4,22 @@
 <div class="panel panel-default">
     <div class="panel-body">
         <div class="container">
-            <h1>Les catalogues</h1>
+
+            <div class="page-header">
+                <h1>Les catalogues</h1>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8">
+			      <div class="btn-group" role="group">
+			        <?php echo $this->Html->link('Ajouter un catalogue', array('action' => 'add'), array( 'class' => 'btn btn-sm btn-primary')); ?>
+			      </div>
+		        </div>
+		    </div>
+
+		    <p>
+
             <div class="table-responsive">
-			<h5><?php echo $this->Html->link('Ajouter un catalogue', array('action' => 'add'), array( 'class' => 'btn btn-sm btn-primary')); ?></h5>
                 <table class="table table-hover table-bordered">
                     <thead>
                     <tr>
@@ -18,12 +31,11 @@
                     <tbody>
                     <?php foreach ($catalogsarticles as $catalog): ?>
                         <tr>
-                            <td>
-                                <?= $catalog['CatalogsArticle']['id']; ?>
-                            </td>
-                            <td>
-                                <?= $this->Html->link($catalog['CatalogsArticle']['label'],
-										array('controller' => 'catalogsarticles', 'action' => 'view', $catalog['CatalogsArticle']['id']));?>
+                            <td><?= $catalog['CatalogsArticle']['id']; ?></td>
+                            <td><?= $this->Html->link($catalog['CatalogsArticle']['label'],array(
+                                                                                            'controller' => 'catalogsarticles',
+                                                                                            'action' => 'view',
+                                                                                            $catalog['CatalogsArticle']['id']));?>
                             </td>
                             <td>
 

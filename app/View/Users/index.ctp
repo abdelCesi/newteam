@@ -3,25 +3,38 @@
 <div class="panel panel-default">
     <div class="panel-body">
         <div class="container">
-            <h1>Listes des utilisateurs</h1>
-            <?= $this->Html->link("Ajouter un utilisateur", array('controller' => 'Users','action'=> 'add'), array( 'class' => 'btn btn-sm btn-primary')); ?>
-            <br />
-            <br />
+
+            <div class="page-header">
+                <h1>Listes des utilisateurs</h1>
+            </div>
+
+             <div class="row">
+                 <div class="col-md-8">
+
+                     <div class="btn-group" role="group">
+                        <?= $this->Html->link("Ajouter un utilisateur", array('controller' => 'Users','action'=> 'add'), array( 'class' => 'btn btn-sm btn-primary')); ?>
+                     </div>
+                 </div>
+             </div>
+
+            <p>
+
             <div class="table-responsive">
                 <table class="table table-hover table-bordered">
                     <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Username</th>
-                        <th>Firstname</th>
-                        <th>Address</th>
-                        <th>Mail</th>
-                        <th>Phone_Number</th>
-						<th>Profil</th>
-						<th>Service</th>
-                        <th>Actions</th>
-                    </tr>
+                        <tr>
+                            <th>ID</th>
+                            <th>Username</th>
+                            <th>Firstname</th>
+                            <th>Address</th>
+                            <th>Mail</th>
+                            <th>Phone_Number</th>
+                            <th>Profil</th>
+                            <th>Service</th>
+                            <th>Actions</th>
+                        </tr>
                     </thead>
+
                     <tbody>
                     <?php foreach ($users as $User): ?>
                         <tr>

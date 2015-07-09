@@ -1,17 +1,20 @@
-<div class="lengths form">
-<?php echo $this->Form->create('Length'); ?>
-	<fieldset>
-		<legend><?php echo __('Add Length'); ?></legend>
-	<?php
-		echo $this->Form->input('length');
-	?>
-	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
-</div>
-<div class="actions">
-	<h3><?php echo __('Menu'); ?></h3>
-	<ul>
-		<li>Length</li>
-		<li><?php echo $this->Html->link(__('Back'), array('action' => 'index')); ?></li> </br>
-	</ul>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="container">
+
+            <div class="page-header">
+                <h2>Ajouter une longueur</h2>
+            </div>
+<?php
+    echo $this->Form->create('Length');
+	echo $this->Form->input('length', array('label' => 'Longueur ', 'class' => 'form-control'));
+	echo $this->Form->submit('Ajouter',
+    	        array('after' => $this->Html->link('Annuler', array('action' => 'index'), array('class' => 'btn btn-default', 'style' => 'margin-left:10px'), "Etes-vous sûr de quitter cette page ?"))
+    	    );
+    	echo $this->Form->end();
+    ?>
+
+            </div>
+        </div>
+    </div>
 </div>

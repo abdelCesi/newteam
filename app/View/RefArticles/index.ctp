@@ -3,19 +3,32 @@
 <div class="panel panel-default">
     <div class="panel-body">
         <div class="container">
-            <h1>Les articles</h1>
+
+          <div class="page-header">
+              <h1>Les articles</h1>
+          </div>
+
             <div class="row">
               <div class="col-md-8">
-                <h5>
-                    <?php echo $this->Html->link('Ajouter une référence article', array('action' => 'add'), array( 'class' => 'btn btn-sm btn-primary')); ?>
-                </h5>
+               <div class="btn-group" role="group">
+                    <?php echo $this->Html->link('Ajouter une référence article', array(
+                                                                                    'action' => 'add'),
+                                                                                  array( 'class' => 'btn btn-sm btn-primary')); ?>
+                </div>
               </div>
+
               <div class="col-md-4">
-                <?php echo $this->Form->create('RefArticle'); ?>
-                <?php echo $this->Form->input('search', array('label' => false,'placeholder' => 'Recherche ...')); ?>
-                <?php echo $this->Form->End(); ?>
+                    <?php echo $this->Form->create('RefArticle'); ?>
+                    <?php echo $this->Form->input('search', array(
+                                                                'label' => false,
+                                                                'placeholder' => 'Recherche ...',
+                                                                'class' => 'form-control'
+                                                                 )); ?>
+                    <?php echo $this->Form->End(); ?>
               </div>
             </div>
+
+
             <div class="table-responsive">
                 <table  class="table table-hover table-bordered">
                     <thead>

@@ -3,7 +3,21 @@
 <div class="panel panel-default">
     <div class="panel-body">
         <div class="container">
-            <h1>Listes des heures de travail</h1>
+
+            <div class="page-header">
+                <h1>Listes des heures de travail</h1>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8">
+                      <div class="btn-group" role="group">
+                            <?= $this->Html->link("Ajouter un horaire de travail", array('controller' => 'WorkingHours','action'=> 'add'), array( 'class' => 'btn btn-sm btn-primary')); ?>
+                       </div>
+                </div>
+            </div>
+
+            <p>
+
             <div class="table-responsive">
                 <table class="table table-hover table-bordered">
                     <thead>
@@ -64,7 +78,6 @@
                     </tbody>
                 </table>
             </div>
-            <?= $this->Html->link("Ajouter un horaire de travail", array('controller' => 'WorkingHours','action'=> 'add'), array( 'class' => 'btn btn-sm btn-primary')); ?>
         </div>
     </div>
 </div>
