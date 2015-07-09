@@ -45,7 +45,7 @@
 					<div class="modal-body">
 						<?php
 							echo $this->Form->create('Profilfunctionnality');
-							echo $this->Form->input('profile_id', array('default'=>$profile['Profile']['id'], 'type'=>'hidden', 'disabled' => 'disabled'));
+							echo $this->Form->input('profile_id', array('default'=>$profile['Profile']['id'], 'type'=>'hidden'));
 							echo $this->Form->input('functionnality_id');							
 						?>
 					</div>

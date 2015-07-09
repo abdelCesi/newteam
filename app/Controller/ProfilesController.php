@@ -122,21 +122,18 @@ class ProfilesController extends AppController {
 			if( $this->request->is( 'post' ) || $this->request->is( 'put' ) ){
 				if( $this->Profile->Profilfunctionnality->save( $this->request->data ) ){
 					$this->Session->setFlash('Fonctionnalit&eacute; affect&eacute;.');
-					return $this->redirect($this->here);
+					$this->here;
 				}else{
 					$this->Session->setFlash('Impossible d&rsquo;affecter la fonctionnalit&eacute;. S&rsquo;il vous plaît , essayez de nouveau .');
 				}
 			}else{
-				// lecture des données de l'utilisateur
 				//remplissage de notre formulaire en html automatiquement
 				$this->request->data = $this->Profile->read();
 				
 			}
 
 		}else{
-			//Si il nnous allons indiquer à l'utilisateur qu'il n'y a pas l'utilisateur
 			$this->Session->setFlash('La fonctionnalit&eacute; du profil que vous essayez de modifier n&rsquo;existe pas .');
-			//$this->redirect(array('action' => 'view'));
 		}
 	}	
 }

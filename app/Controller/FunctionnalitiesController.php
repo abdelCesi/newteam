@@ -38,11 +38,13 @@ class FunctionnalitiesController extends AppController {
 		}
 		$options = array('conditions' => array('Functionnality.' . $this->Functionnality->primaryKey => $id));
 		$this->set('functionnality', $this->Functionnality->find('first', $options));
-		$workingHours = $this->Functionnality->Profile->WorkingHour->find('list', array('fields' => array('WorkingHour.id','WorkingHour.team_code','WorkingHour.start_time','WorkingHour.end_time')));
+		
+		$profile =  $this->set('profiles', $this->Functionnality->Profile->find('list'), array('fields' => array('Profile.id', 'Profile.profile_name')));
+		$this->set(compact('dependencies', 'profiles'));
 		$functionnality = $this->set('functionnalities', $this->Functionnality->find('list'));
 		$profilfunctionnality =  $this->set('profilfunctionnalities', $this->Functionnality->Profilfunctionnality->find('list'));
-		$profile =  $this->set('profiles', $this->Functionnality->Profile->find('list'), array('fields' => array('Profile.id', 'Profile.profile_name')));
-		$this->set(compact('profiles', 'functionnalities','profilfunctionnalities'));
+		
+		$this->set(compact('functionnalities','profilfunctionnalities'));
 		$this->affectProfil();
 	}
 
